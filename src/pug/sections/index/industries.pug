@@ -1,0 +1,27 @@
+- const industriesList = ['Healthcare', 'Software', 'Human Capital Management', 'Marketing Services', 'Technology & Professional Services']
+- const industriesItems = ['Agriculture', 'Compliance', 'Facility and Residential', 'Industrial Services', 'Transportation and Logistics']
+
+section.industries
+  .container
+    .industries__top
+      h3.industries__title Our 
+        i Industries
+
+    .industries__list
+      .industry.industry--long
+        .industry__header
+          p.industry__title Business Services
+          svg(width='28' height='28' viewbox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M28 14.1751H19.5549C16.7935 14.1751 14.5549 11.9365 14.5549 9.17512V0M13.6494 28V19.1751C13.6494 16.4137 11.4109 14.1751 8.64945 14.1751H0' stroke='#AEAEAE' stroke-width='1.5')
+        .industry__content
+          p.industry__text Our Business Services division offers a comprehensive suite of solutions tailored to various industry needs. We provide the expertise and support to drive growth and efficiency in your business.
+          .industry__list
+            each item in industriesItems
+              p.industry__item= item
+
+      each industry in industriesList
+        .industry
+          .industry__header
+            p.industry__title= industry
+            svg(width='28' height='28' viewbox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M28 14.1751H19.5549C16.7935 14.1751 14.5549 11.9365 14.5549 9.17512V0M13.6494 28V19.1751C13.6494 16.4137 11.4109 14.1751 8.64945 14.1751H0' stroke='#AEAEAE' stroke-width='1.5')

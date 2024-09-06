@@ -14,3 +14,22 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin myHover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+  &:active {
+    @content;
+  }
+}

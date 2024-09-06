@@ -1,0 +1,26 @@
+.commitment {
+  padding: 257px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0;
+  }
+}
+
+.commitment__subtitle {
+  margin-bottom: 16px;
+  color: #aeaeae;
+  @include body1;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 6px;
+    @include body1;
+  }
+}
+
+.commitment__text {
+  @include h4;
+
+  @media screen and (max-width: 768px) {
+    @include h7;
+  }
+}

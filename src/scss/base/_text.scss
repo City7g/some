@@ -82,3 +82,102 @@
 .text-p3 {
   color: $text;
 }
+
+@mixin h1 {
+  font-family: 'PlayfairDisplay';
+  font-size: 80px;
+  line-height: 1.075;
+}
+
+@mixin h4 {
+  font-family: 'PlayfairDisplay';
+  font-size: 48px;
+  line-height: 1.33;
+}
+
+@mixin h5 {
+  font-family: 'PlayfairDisplay';
+  font-size: 48px;
+  line-height: 1.33;
+  text-style: italic;
+}
+
+@mixin h7 {
+  font-family: 'PlayfairDisplay';
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+@mixin h8 {
+  font-family: 'PlayfairDisplay';
+  font-size: 32px;
+  line-height: 1.25;
+  text-style: italic;
+}
+
+@mixin s1 {
+  font-size: 28px;
+  line-height: 1.64;
+}
+
+@mixin s2 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+@mixin s4 {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+@mixin s5 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+@mixin body1 {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.05;
+  text-transform: uppercase;
+}
+
+@mixin body2 {
+  font-size: 18px;
+  line-height: 1.556;
+}
+
+@mixin body3 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.05;
+  text-transform: uppercase;
+}
+
+@mixin body4 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@mixin body5 {
+  font-size: 14px;
+  line-height: 1.57;
+  text-transform: uppercase;
+}
+
+@mixin body6 {
+  font-size: 14px;
+  line-height: 1.43;
+  text-transform: uppercase;
+}
+
+@mixin body7 {
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+@mixin caption2 {
+  font-size: 12px;
+  line-height: 1.33;
+}

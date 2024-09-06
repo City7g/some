@@ -4,19 +4,15 @@
   align-items: center;
   gap: 8px;
   padding: 5px 12px;
-  color: $white;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: center;
-  border: 1px solid $primary;
+  color: #28231e;
+  @include body6;
+  border: 1px solid #28231e;
   border-radius: $radius;
-  background-color: $primary;
+  background-color: $white;
   transition: 0.3s all ease;
 
   &:hover {
-    border-color: darken($primary, 5);
-    background-color: darken($primary, 5);
+    background-color: #eaeaea;
   }
 
   &:focus-visible {
@@ -27,8 +23,7 @@
   }
 
   &:active {
-    border-color: darken($primary, 10);
-    background-color: darken($primary, 10);
+    background-color: #cecfcf;
   }
 
   &:disabled {
@@ -47,18 +42,24 @@
 }
 
 .btn--secondary {
-  border-color: $secondary;
-  background-color: $secondary;
+  background-color: $white;
 
   &:hover {
-    border-color: darken($secondary, 5);
-    background-color: darken($secondary, 5);
+    background-color: #eaeaea;
+  }
+
+  &:focus-visible {
+    outline: 1px solid #28231e;
+  }
+
+  &:active {
+    background-color: #cecfcf;
   }
 
   &:disabled {
-    color: $white;
-    border-color: transparent;
-    background-color: rgba($secondary, 0.3);
+    color: #828282;
+    border-color: #cecfcf;
+    background-color: #cecfcf;
   }
 }
 

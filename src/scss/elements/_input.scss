@@ -1,21 +1,28 @@
 input[type='text'],
 input[type='email'],
 input[type='password'],
-input[type='tel'] {
-  display: block;
-  width: 100%;
-  padding: 5px 12px;
-  color: $black;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  border: 1px solid $primary;
+input[type='tel'],
+textarea {
+  padding: 8px 15px;
+  color: $white;
+  @include body7;
   border-radius: $radius;
-  background-color: $white;
-  transition: outline-color 0.4s ease-in-out, outline-offset 0.4s ease-in-out;
+  border: 1px solid #4a3c76;
+  background-color: #4a3c76;
+  transition: 0.2s background-color ease;
+
+  &::placeholder {
+    opacity: 1;
+    color: #c3bed8;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #6d46dc;
+  }
 
   &:focus {
-    outline: 1px solid $primary;
+    outline: none;
   }
 
   &:disabled {
@@ -23,27 +30,11 @@ input[type='tel'] {
     opacity: 0.4;
   }
 
-  @media (min-width: 1200px) {
-    padding: 8px 20px;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
 }
 
-.input.error .input__error {
-  display: block;
-}
-
-.input.error .input__field {
-  outline: 2px solid red;
-  outline-offset: 2px;
-}
-
-.input .input__error {
-  display: none;
-  margin-top: 3px;
-  color: red;
-  font-size: 12px;
+textarea {
+  resize: none;
 }

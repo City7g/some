@@ -1,3 +1,22 @@
+import Swiper from 'swiper'
+
+const some = document.querySelector('.js-insights-slider')
+
+if (some) {
+  new Swiper('.js-insights-slider .swiper', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.insights-slider__next',
+      prevEl: '.insights-slider__prev',
+    },
+    pagination: {
+      el: '.insights-slider__pagination',
+      clickable: true,
+    },
+  })
+}
+
 const burger = document.querySelector('.ui .burger')
 if (burger) {
   burger.addEventListener('click', e => {

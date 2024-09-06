@@ -1,0 +1,216 @@
+.insight {
+  padding: 80px 0 100px;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    padding: 55px 0 55px;
+  }
+}
+
+.insight__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 44px;
+  }
+}
+
+.insight__link {
+  @media screen and (max-width: $tablet) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: ($tablet + 1)) {
+    min-width: 308px;
+  }
+}
+
+.insight__title {
+  @include h4;
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
+}
+
+.insight__list {
+  margin: 0 -8px;
+  overflow: visible !important;
+
+  @media screen and (max-width: $tablet) {
+    margin: 0 -4px;
+  }
+}
+.insight__pagination {
+  position: static;
+  margin-top: 18px;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: none;
+  }
+}
+
+.insight .insight__pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  border-radius: 0;
+}
+
+.insight__bottom {
+  @media screen and (min-width: ($tablet + 1)) {
+    width: calc(33% - 8px);
+    margin: 60px auto 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 12px;
+  }
+}
+
+.insight__bottom .btn {
+  width: 100%;
+}
+
+.card-report {
+  padding: 0 8px;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 4px;
+  }
+}
+
+.card-report__image {
+  position: relative;
+  padding-bottom: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.card-report__mask {
+  transition: 0.8s transform ease;
+}
+
+.card-report__img,
+.card-report__img img,
+.card-report__mask,
+.card-report__mask img {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+}
+
+.card-report__image .card-report__mask {
+  @include myHover {
+    transform: scale(3);
+  }
+}
+
+.card-report__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-report__date {
+  padding: 6px 10px;
+  @include caption2;
+  background-color: #eaeaea;
+  border-radius: 30px;
+}
+
+.card-report__calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #28231e;
+  border: 2px solid #eaeaea;
+}
+
+.card-report__calendar svg {
+  width: 16px;
+  height: 16px;
+  fill: #e8e5ff;
+}
+
+.card-report__line {
+  overflow: hidden;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #eaeaea;
+  margin: 0 -1px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+
+  &:after {
+    transform: translate(-50%, calc(-50% - 10px));
+  }
+
+  &:before {
+    transform: translate(-50%, calc(-50% + 10px));
+  }
+}
+
+.card-report__title {
+  @include s2;
+  margin-bottom: 6px;
+  transition: 0.3s all ease;
+
+  @media screen and (max-width: $tablet) {
+    @include s4;
+  }
+}
+
+.card-report:hover .card-report__title {
+  color: $primary;
+}
+
+.card-report__text {
+  @include body7;
+  color: #828282;
+}
+
+.card-report__tags {
+  display: flex;
+}
+
+.card-report__tag {
+  @include caption2;
+  padding: 4px 8px;
+  margin-top: 24px;
+  margin-right: 8px;
+  color: #636363;
+  border: 1px solid #636363;
+  border-radius: 1px;
+}
