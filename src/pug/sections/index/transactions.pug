@@ -1,0 +1,22 @@
+section.transactions
+  .container
+    .transactions__top
+      h2.transactions__title Our Transactions
+      p.transactions__text Our company facilitates transactions that drive growth and value. We provide thorough support to ensure every deal is meticulously planned and successfully executed.
+
+  .transactions__list
+    - for (let i = 0; i < 3; i++)
+      .transaction
+        img.transaction__img(src=`/img/transactions/item-${i + 1}.png`, alt="")
+        .transaction__flags
+          img.transaction__flag(src="/img/flags/usa.svg" alt="")
+          p.transaction__country-name USA
+          img.transaction__flag(src="/img/flags/france.svg" alt="")
+          p.transaction__country-name France
+        .transaction__tags
+          +tag('Data & Analytics')
+          +tag('Data Engineering')
+
+  .container
+    .transactions__btn
+      button.btn.btn--secondary Disclose All Transactions

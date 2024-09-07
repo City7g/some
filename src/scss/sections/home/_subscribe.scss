@@ -1,0 +1,16 @@
+.subscribe {
+  padding: 80px 0;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: 44px;
+  }
+}
+
+.subscribe__title {
+  margin-bottom: 36px;
+  @include h2;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}

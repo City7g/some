@@ -204,13 +204,3 @@
 .card-report__tags {
   display: flex;
 }
-
-.card-report__tag {
-  @include caption2;
-  padding: 4px 8px;
-  margin-top: 24px;
-  margin-right: 8px;
-  color: #636363;
-  border: 1px solid #636363;
-  border-radius: 1px;
-}

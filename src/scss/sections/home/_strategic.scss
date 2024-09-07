@@ -1,0 +1,31 @@
+.strategic {
+  padding: 231px 0 264px;
+  color: $white;
+  background-color: #21193b;
+  text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    padding: 241px 16px 242px;
+  }
+}
+
+.strategic__title {
+  @include h4;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.strategic__text {
+  color: #c3bed8;
+}
+
+.strategic__btn {
+  margin-top: 56px;
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 44px;
+  }
+}

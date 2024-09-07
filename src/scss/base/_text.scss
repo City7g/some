@@ -89,6 +89,21 @@
   line-height: 1.075;
 }
 
+@mixin h2 {
+  font-family: 'PlayfairDisplay';
+  font-size: 80px;
+  line-height: 0.75;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin h3 {
+  font-family: 'PlayfairDisplay';
+  font-size: 70px;
+  line-height: 1.17;
+  font-weight: 400;
+}
+
 @mixin h4 {
   font-family: 'PlayfairDisplay';
   font-size: 48px;
@@ -100,6 +115,13 @@
   font-size: 48px;
   line-height: 1.33;
   text-style: italic;
+}
+
+@mixin h6 {
+  font-family: 'PlayfairDisplay';
+  font-size: 36px;
+  line-height: 1.22;
+  font-weight: 400;
 }
 
 @mixin h7 {

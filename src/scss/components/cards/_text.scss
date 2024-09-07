@@ -1,0 +1,31 @@
+.card-text {
+  display: grid;
+  padding: 12px 0 11px;
+  @include body5;
+  border-bottom: 1px solid #242727;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.card-text__text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  @include body5;
+  transition: 0.3s opacity ease;
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+}
+
+.card-text:hover .card-text__text {
+  &:nth-child(1) {
+    opacity: 0;
+  }
+
+  &:nth-child(2) {
+    opacity: 1;
+  }
+}

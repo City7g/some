@@ -16,8 +16,8 @@ section.industries
         .industry__content
           p.industry__text Our Business Services division offers a comprehensive suite of solutions tailored to various industry needs. We provide the expertise and support to drive growth and efficiency in your business.
           .industry__list
-            each item in industriesItems
-              p.industry__item= item
+            each industry in industriesItems
+              +cardText(industry)
 
       each industry in industriesList
         .industry

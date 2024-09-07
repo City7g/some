@@ -44,6 +44,7 @@ const html = () => {
     .src('./src/pug/pages/*.pug')
     .pipe(
       pug({
+        pretty: true,
         data: {
           mode: process.env.NODE_ENV,
           image: 'format',

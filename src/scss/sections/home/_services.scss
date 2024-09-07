@@ -1,0 +1,229 @@
+.services {
+  padding: toRem(80) 0 toRem(100);
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(55) 0;
+  }
+}
+
+.services__top {
+  margin-bottom: toRem(60);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(40);
+  }
+}
+
+.services__title {
+  @include h4;
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
+}
+
+.service {
+  display: grid;
+  grid-template-columns: toRem(416) 1fr toRem(416);
+  gap: 0 toRem(16);
+  padding: toRem(39) 0 toRem(40);
+  border-top: toRem(1) solid #eaeaea;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: toRem(48);
+    grid-template-columns: 1fr;
+  }
+}
+
+.service__info {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(25);
+  }
+}
+
+.service__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: toRem(8);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(12);
+  }
+}
+
+.service__title {
+  @include s2;
+
+  @media screen and (max-width: $tablet) {
+    @include s5;
+  }
+}
+
+.service__text {
+  @include body4;
+  color: #828282;
+  max-width: toRem(263);
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+    max-width: toRem(230);
+  }
+}
+
+.service__icon {
+  width: toRem(24);
+  height: toRem(24);
+  margin-left: toRem(8);
+  fill: $primary;
+}
+
+.service__image {
+  overflow: hidden;
+  position: relative;
+  border-radius: toRem(32) toRem(4);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    max-width: toRem(308);
+  }
+
+  @media screen and (max-width: $tablet) {
+    order: 1;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #251a3c;
+    content: '';
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s all ease;
+  }
+
+  @include hover {
+    &:before {
+      opacity: 0.2;
+    }
+  }
+}
+
+.service__image-text {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(toRem(-20), -50%);
+  white-space: nowrap;
+  color: $white;
+  opacity: 0;
+  transition: 0.3s all ease;
+  animation: banner infinite linear 20s forwards paused;
+  animation-delay: 0.3s;
+}
+
+.service__image {
+  @include hover {
+    & .service__image-text {
+      opacity: 1;
+      animation-play-state: running;
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes banner {
+  0% {
+    transform: translate(toRem(-20), -50%);
+  }
+  100% {
+    transform: translate(calc(-50% + toRem(-20)), -50%);
+  }
+}
+
+.service__image-text > *:nth-child(even) {
+  font-family: $secondary-font;
+  font-size: toRem(32);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.service__image-text > *:nth-child(odd) {
+  font-family: $main-font;
+  font-size: toRem(32);
+  line-height: 1.5;
+}
+
+.service__image-text > * {
+  position: relative;
+  padding-left: toRem(42);
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: toRem(16);
+    transform: translateY(-50%);
+    content: '';
+    display: block;
+    width: toRem(10);
+    height: toRem(10);
+    background-color: $white;
+    border-radius: toRem(2);
+  }
+}
+
+.service__img,
+.service__img img {
+  display: block;
+  width: 100%;
+}
+
+.service__list {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(40);
+  }
+}
+
+.service__item {
+  display: grid;
+  padding-bottom: toRem(11);
+  border-bottom: toRem(1) solid #242727;
+}
+
+.service__change {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  transition: 0.3s all ease;
+}
+
+.service__change:nth-child(2),
+.service__item:hover .service__change:nth-child(1) {
+  opacity: 0;
+}
+
+.service__item:hover .service__change:nth-child(2) {
+  opacity: 1;
+}
+
+.service__item-text {
+  @include body5;
+  color: #242727;
+}
+
+.service__item-icon {
+  width: toRem(16);
+  height: toRem(16);
+  fill: $primary;
+}
+
+.service__item + .service__item {
+  padding-top: toRem(12);
+}
