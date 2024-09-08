@@ -1,29 +1,182 @@
 footer.footer
   .container
-    .footer__wrap
-      .footer__first
-        +logo.footer__logo
-        p.text-p1.footer__text
-          | Join our community
-        .footer__socials
-          a(href="#" aria-label='Discort link').footer__social
-            i.icon-DiscordLogo 
-          a(href="#" aria-label='Youtube link').footer__social
-            i.icon-YoutubeLogo 
-          a(href="#" aria-label='Instagram link').footer__social
-            i.icon-InstagramLogo 
 
-      .footer__second
-        h4.title-h5.footer__title Explore
-        .footer__links
-          a.text-p1.footer__link(href="/") Home
-          a.text-p1.footer__link(href="/about.html") About
-          a.text-p1.footer__link(href="/ui.html") UI
+    a.footer-logo__link(href="/")
+      img.footer-logo__img(src="img/logo/logo-footer.svg")
 
-      .footer__third
-        h4.title-h5.footer__title Join our weekly digest
-        p.text-main.footer__text
-          | Get exclusive promotions & updates straight to your inbox.
+    .footer__main
+      .footer__first-column
+        p.footer__title Service
+        .footer__first-content
+          .footer__block
+            p.footer__sub-title Mergers & Acquisitions
+            a.footer__link(href='/') Performance Improvement
+            a.footer__link(href='/') Valuation
+            a.footer__link(href='/') Transaction Advisory Services
+          .footer__block
+            p.footer__sub-title Capital Advisory
+            a.footer__link(href='/') Buy Side Advisory
+            a.footer__link(href='/') Sell Side Advisory
+          .footer__block
+            p.footer__sub-title Financial Advisory Services
+            a.footer__link(href='/') Debt Capital Advisory
+            a.footer__link(href='/') Equity Capital Advisory
+          .footer__block
+            p.footer__sub-title Research
+            a.footer__link(href='/') Addressable Market Analysis
+            a.footer__link(href='/') Platform Diligence
+            a.footer__link(href='/') Market Surveys
+      .footer__second-column
+        p.footer__title Industries
+        .footer__second-content
+          .footer__block
+            p.footer__sub-title Business Services
+            a.footer__link(href='/') Agriculture
+            a.footer__link(href='/') Compliance
+            a.footer__link(href='/') Facility and Residential
+            a.footer__link(href='/') Industrial Services
+            a.footer__link(href='/') Transportation and Logistics
+          .footer__block
+            p.footer__sub-title Healthcare
+            a.footer__link(href='/') Healthcare IT
+            a.footer__link(href='/') Healthcare Services
+            a.footer__link(href='/') Life Sciences
+          .footer__block
+            p.footer__sub-title Software
+            a.footer__link(href='/') FinTech
+            a.footer__link(href='/') Enterprise Software
+            a.footer__link(href='/') Infrastructure Software
+            a.footer__link(href='/') Vertical Software
+          .footer__block
+            p.footer__sub-title Human Capital Management
+            a.footer__link(href='/') Business Process Outsourcing
+            a.footer__link(href='/') Professional Employer Organizations
+            a.footer__link(href='/') Staffing & Recruiting
+          .footer__block
+            p.footer__sub-title Technology & Professional Services
+            a.footer__link(href='/') Cyber & Managed Services
+            a.footer__link(href='/') Consulting
+            a.footer__link(href='/') Digital Transformation
+          .footer__block
+            p.footer__sub-title Marketing Services
+            a.footer__link(href='/') Performance Marketing
+            a.footer__link(href='/') Platform Diligence
+            a.footer__link(href='/') Market Surveys
+      .footer__third-column
+        .footer__column-top
+          p.footer__title About
+          .footer__block
+            a.footer__link(href='/') Performance Marketing
+            a.footer__link(href='/') Platform Diligence
+            a.footer__link(href='/') Market Surveys
+        .footer__column-bottom  
+          p.footer__column-text Envoy, Inc. is a wholly owned subsidiary of Regions Financial Corporation. No offerings of securities are made through this site; all securities are offered exclusively through Regions Securities LLC, a registered broker-dealer and member of FINRA and SIPC. Testimonials may not be representative of all client experiences. Testimonials are not a guarantee of future performance or success. <br/> <br/> © 2024 Envoy. All Rights Reserved.
+  
+  
+    .footer__main--mobile
+      .footer__first-column
+        p.footer__title Service
+        .footer__first-content
+          .footer__block
+            p.footer__sub-title M&A
+            a.footer__link(href='/') Performance Improvement
+            a.footer__link(href='/') Valuation
+            a.footer__link(href='/') Transaction Advisory Services
+          .footer__block
+            p.footer__sub-title Research
+            a.footer__link(href='/') Platform Diligence
+            a.footer__link(href='/') Market Surveys
+            a.footer__link(href='/') Addressable Market Analysis
+          .footer__block
+            p.footer__sub-title Capital Advisory
+            a.footer__link(href='/') Buy Side Advisory
+            a.footer__link(href='/') Sell Side Advisory
+          .footer__block
+            p.footer__sub-title Financial Advisory
+            a.footer__link(href='/') Debt Capital Advisory
+            a.footer__link(href='/') Equity Capital Advisory
+      .footer__second-column
+        p.footer__title Industries
+        .footer__second-content
+          .footer__block
+            p.footer__sub-title Business Services
+            a.footer__link(href='/') Agriculture
+            a.footer__link(href='/') Compliance
+            a.footer__link(href='/') Facility and Residential
+            a.footer__link(href='/') Industrial Services
+            a.footer__link(href='/') Transportation and Logistics
+          .footer__block
+            p.footer__sub-title Healthcare
+            a.footer__link(href='/') Healthcare IT
+            a.footer__link(href='/') Healthcare Services
+            a.footer__link(href='/') Life Sciences
+          .footer__block
+            p.footer__sub-title Software
+            a.footer__link(href='/') FinTech
+            a.footer__link(href='/') Enterprise Software
+            a.footer__link(href='/') Infrastructure Software
+            a.footer__link(href='/') Vertical Software
+          .footer__block
+            p.footer__sub-title Marketing Services
+            a.footer__link(href='/') Performance Marketing
+            a.footer__link(href='/') Platform Diligence
+            a.footer__link(href='/') Market Surveys
+          .footer__block
+            p.footer__sub-title Human Capital Management
+            a.footer__link(href='/') Business Process Outsourcing
+            a.footer__link(href='/') Professional Employer Organizations
+            a.footer__link(href='/') Staffing & Recruiting
+          .footer__block
+            p.footer__sub-title Technology & Professional Services
+            a.footer__link(href='/') Cyber & Managed Services
+            a.footer__link(href='/') Consulting
+            a.footer__link(href='/') Digital Transformation
+      .footer__third-column
+        .footer__column-top
+          p.footer__title About
+          .footer__third-content
+            .footer__block
+              a.footer__link(href='/') About Us
+              a.footer__link(href='/') Case Studies
+              a.footer__link(href='/') Global Coverage
+              a.footer__link(href='/') Our Team
+              a.footer__link(href='/') Careers
+        .footer__column-bottom  
+          p.footer__column-text Envoy, Inc. is a wholly owned subsidiary of Regions Financial Corporation. No offerings of securities are made through this site; all securities are offered exclusively through Regions Securities LLC, a registered broker-dealer and member of FINRA and SIPC. Testimonials may not be representative of all client experiences. Testimonials are not a guarantee of future performance or success. <br/> © 2024 Envoy. All Rights Reserved.
 
-    p.text-p3.footer__copy
-      | Ⓒ Start template. Use this template freely.
+    p.footer__text 
+      | Securities transactions conducted through Fidus Securities, LLC, an affiliated entity. Member 
+      a(href="/") FINRA/SIPC. BrokerCheck
+
+    .sub-footer 
+      .sub-footer__left
+        .sub-footer__links 
+          p © 2024 Envoy
+          .dot
+          a(href="/") Privacy Policy
+          .dot
+          a(href="/") Terms of Use
+        .sub-footer__design 
+          p Designed by
+          a(href="/") league design agency
+
+      .sub-footer__right
+        p Follow Us On Social Media
+        .social-links 
+          a(href="/") 
+            <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 3.09668C19.5304 3.09668 20.0391 3.30739 20.4142 3.68247C20.7893 4.05754 21 4.56625 21 5.09668V19.0967C21 19.6271 20.7893 20.1358 20.4142 20.5109C20.0391 20.886 19.5304 21.0967 19 21.0967H5C4.46957 21.0967 3.96086 20.886 3.58579 20.5109C3.21071 20.1358 3 19.6271 3 19.0967V5.09668C3 4.56625 3.21071 4.05754 3.58579 3.68247C3.96086 3.30739 4.46957 3.09668 5 3.09668H19ZM18.5 18.5967V13.2967C18.5 12.4321 18.1565 11.6029 17.5452 10.9915C16.9338 10.3801 16.1046 10.0367 15.24 10.0367C14.39 10.0367 13.4 10.5567 12.92 11.3367V10.2267H10.13V18.5967H12.92V13.6667C12.92 12.8967 13.54 12.2667 14.31 12.2667C14.6813 12.2667 15.0374 12.4142 15.2999 12.6767C15.5625 12.9393 15.71 13.2954 15.71 13.6667V18.5967H18.5ZM6.88 8.65668C7.32556 8.65668 7.75288 8.47968 8.06794 8.16462C8.383 7.84956 8.56 7.42224 8.56 6.97668C8.56 6.04668 7.81 5.28668 6.88 5.28668C6.43178 5.28668 6.00193 5.46473 5.68499 5.78167C5.36805 6.09861 5.19 6.52846 5.19 6.97668C5.19 7.90668 5.95 8.65668 6.88 8.65668ZM8.27 18.5967V10.2267H5.5V18.5967H8.27Z" fill="white"/>
+            </svg>
+          a(href="/") 
+            <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.9248 17.3523H16.5507L9.06621 6.87649H7.44012L14.9248 17.3523Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4142 3.68247C20.0391 3.30739 19.5304 3.09668 19 3.09668H5C4.46957 3.09668 3.96086 3.30739 3.58579 3.68247C3.21071 4.05754 3 4.56625 3 5.09668V19.0967C3 19.6271 3.21071 20.1358 3.58579 20.5109C3.96086 20.886 4.46957 21.0967 5 21.0967H19C19.5304 21.0967 20.0391 20.886 20.4142 20.5109C20.7893 20.1358 21 19.6271 21 19.0967V5.09668C21 4.56625 20.7893 4.05754 20.4142 3.68247ZM17.6089 6.09668L13.1417 11.1779L18 18.0967H14.4267L11.155 13.4376L7.0587 18.0967H6L10.6849 12.7683L6 6.09668H9.57333L12.6714 10.5086L16.5502 6.09668H17.6089Z" fill="white"/>
+            </svg>
+
+          a(href="/") 
+            <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.5 12.1201C21.5 6.87612 17.244 2.62012 12 2.62012C6.756 2.62012 2.5 6.87612 2.5 12.1201C2.5 16.7181 5.768 20.5466 10.1 21.4301V14.9701H8.2V12.1201H10.1V9.74512C10.1 7.91162 11.5915 6.42012 13.425 6.42012H15.8V9.27012H13.9C13.3775 9.27012 12.95 9.69762 12.95 10.2201V12.1201H15.8V14.9701H12.95V21.5726C17.7475 21.0976 21.5 17.0506 21.5 12.1201Z" fill="white"/>
+            </svg>
+
+
+
