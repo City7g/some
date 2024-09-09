@@ -1,112 +1,27 @@
--const footerBlockOfLinks = [
-  {
-    subTitle: 'Mergers & Acquisitions',
-    links: [
-      { text: 'Performance Improvement', href: '/' },
-      { text: 'Valuation', href: '/' },
-      { text: 'Transaction Advisory Services', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Capital Advisory',
-    links: [
-      { text: 'Buy Side Advisory', href: '/' },
-      { text: 'Sell Side Advisory', href: '/' },
-    ]
-  },
-  {
-    subTitle: 'Financial Advisory Services',
-    links: [
-      { text: 'Debt Capital Advisory', href: '/' },
-      { text: 'Equity Capital Advisory', href: '/' },
-    ]
-  },
-  {
-    subTitle: 'Research',
-    links: [
-      { text: 'Addressable Market Analysis', href: '/' },
-      { text: 'Platform Diligence', href: '/' },
-      { text: 'Market Surveys', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Business Services',
-    links: [
-      { text: 'Agriculture', href: '/' },
-      { text: 'Compliance', href: '/' },
-      { text: 'Facility and Residential', href: '/' }
-      { text: 'Industrial Services', href: '/' }
-      { text: 'Transportation and Logistics', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Healthcare',
-    links: [
-      { text: 'Healthcare IT', href: '/' },
-      { text: 'Healthcare Services', href: '/' },
-      { text: 'Life Sciences', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Software',
-    links: [
-      { text: 'FinTech', href: '/' },
-      { text: 'Enterprise Software', href: '/' },
-      { text: 'Infrastructure Software', href: '/' }
-      { text: 'Vertical Software', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Human Capital Management',
-    links: [
-      { text: 'Business Process Outsourcing', href: '/' },
-      { text: 'Professional Employer Organizations', href: '/' },
-      { text: 'Staffing & Recruiting', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Technology & Professional Services',
-    links: [
-      { text: 'Cyber & Managed Services', href: '/' },
-      { text: 'Consulting', href: '/' },
-      { text: 'Digital Transformation', href: '/' }
-    ]
-  },
-  {
-    subTitle: 'Marketing Services',
-    links: [
-      { text: 'Performance Marketing', href: '/' },
-      { text: 'Platform Diligence', href: '/' },
-      { text: 'Market Surveys', href: '/' }
-    ]
-  },
-]
-
 footer.footer
   .container
-
     a.footer-logo__link(href="/")
       img.footer-logo__img(src="img/logo/logo-footer.svg")
 
     .footer__main
       .footer__first-column
-        p.footer__title Service
+        p.footer__title Services
         .footer__first-content
-          each item in footerBlockOfLinks.slice(0, 4)
+          each item in footerLinks.slice(0, 4)
             .footer__block 
-              p.footer__sub-title= item.subTitle
+              p.footer__sub-title= item.title
               each link in item.links 
                 a.footer__link(href=link.href)= link.text
 
       .footer__second-column
         p.footer__title Industries
         .footer__second-content
-          each item in footerBlockOfLinks.slice(4)
+          each item in footerLinks.slice(4)
             .footer__block 
-              p.footer__sub-title= item.subTitle
+              p.footer__sub-title= item.title
               each link in item.links 
                 a.footer__link(href=link.href)= link.text
-                
+
       .footer__third-column
         .footer__column-top
           p.footer__title About

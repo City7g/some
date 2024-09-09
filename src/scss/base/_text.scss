@@ -148,9 +148,9 @@
 }
 
 @mixin s3 {
+  font-family: 'PlayfairDisplay';
   font-size: 24px;
-  // line-height: 1.3; // Это портит pixel perfect
-  line-height: toRem(32); 
+  line-height: 1.3333;
 }
 
 @mixin s4 {
@@ -207,7 +207,7 @@
 
 @mixin caption2 {
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.3333;
 }
 
 @mixin caption3 {

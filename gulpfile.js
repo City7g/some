@@ -8,6 +8,7 @@ import gcmq from 'gulp-group-css-media-queries'
 import cleanCSS from 'gulp-clean-css'
 
 import config from './webpack.config.js'
+import { footerLinks } from './src/data/footer.js'
 
 console.log(process.env.NODE_ENV)
 
@@ -48,6 +49,7 @@ const html = () => {
         data: {
           mode: 'development',
           image: 'format',
+          footerLinks: footerLinks
         },
       })
     )
