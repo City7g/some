@@ -46,15 +46,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-
-.footer__main--mobile {
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: grid;
+        display: grid;
     row-gap: toRem(48);
     grid-template-columns: 1fr;
     margin: toRem(40) 0 toRem(32) 0;
@@ -77,6 +69,7 @@
   display: inline-flex;
   flex-direction: column;
   margin-top: toRem(24);
+  width: 100%;
 }
 
 .footer__link,
@@ -87,6 +80,16 @@
 
   &:not(:last-child) {
     margin-bottom: toRem(8);
+  }
+}
+
+.footer__link {
+  transition: all ease .6s;
+  text-decoration: underline solid transparent;
+  
+  @include hover {
+    color: $white;
+    text-decoration: underline;
   }
 }
 
@@ -134,11 +137,7 @@
 }
 
 .footer__second-content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  column-gap: toRem(24);
-  max-height: toRem(444); // ???
+  column-count: 2;
 
   @media screen and (max-width: 1090px) {
     column-gap: toRem(16);
