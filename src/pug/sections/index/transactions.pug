@@ -7,12 +7,17 @@ section.transactions
   .transactions__list
     - for (let i = 0; i < 3; i++)
       .transaction
-        img.transaction__img(src=`/img/transactions/item-${i + 1}.png`, alt="")
-        .transaction__flags
-          img.transaction__flag(src="/img/flags/usa.svg" alt="")
-          p.transaction__country-name USA
-          img.transaction__flag(src="/img/flags/france.svg" alt="")
-          p.transaction__country-name France
+        .transaction__wrap
+          .transaction__item
+            img(src=`/img/company/item-${1}.png`, alt="")
+          .transaction__item
+            img(src=`/img/company/item-${2}.png`, alt="")
+          .transaction__bg
+            img(src=`/img/transactions/transaction-wrap.svg`, alt="")
+          p.transaction__type Acquired By
+
+        //- img.transaction__img(src=`/img/transactions/item-${i + 1}.png`, alt="")
+        +flags.transaction__flags('USA', 'FRA')
         .transaction__tags
           +tag('Data & Analytics')
           +tag('Data Engineering')

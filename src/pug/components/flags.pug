@@ -1,0 +1,16 @@
+mixin flags(from = 'USA', to = 'FRA')
+  .flags&attributes(attributes)
+    .flags__item
+      img.flags__flag(src=`/img/flags/${from.toLowerCase()}.svg` alt="")
+      p.flags__name= from
+
+    if to
+      svg.flags__to(width='12' height='12' viewbox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M1.9375 5.02518L10.0624 5.02518' stroke='#828282' stroke-width='0.8' stroke-linecap='round')
+        path(d='M10.0625 6.97873L1.93756 6.97873' stroke='#828282' stroke-width='0.8' stroke-linecap='round')
+        path(d='M10.0599 5.02344L7.35156 2.31513' stroke='#828282' stroke-width='0.8' stroke-linecap='round')
+        path(d='M1.94013 6.98047L4.64844 9.68878' stroke='#828282' stroke-width='0.8' stroke-linecap='round')
+
+      .flags__item
+        img.flags__flag(src=`/img/flags/${to.toLowerCase()}.svg` alt="")
+        p.flags__name= to

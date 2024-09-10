@@ -9,6 +9,8 @@ import cleanCSS from 'gulp-clean-css'
 
 import config from './webpack.config.js'
 import { clientsData } from './src/data/clients.js'
+import { footerLinks } from './src/data/footer.js'
+
 
 console.log(process.env.NODE_ENV)
 
@@ -50,6 +52,7 @@ const html = () => {
           mode: 'development',
           image: 'format',
           clientsData: clientsData,
+          footerLinks: footerLinks
         },
       })
     )
