@@ -1,26 +1,33 @@
 section.transactions
   .container
     .transactions__top
-      h2.transactions__title Our Transactions
+      h2.transactions__title Our <i>Transactions</i>
       p.transactions__text Our company facilitates transactions that drive growth and value. We provide thorough support to ensure every deal is meticulously planned and successfully executed.
 
   .transactions__list
     - for (let i = 0; i < 3; i++)
       .transaction
-        .transaction__wrap
-          .transaction__item
-            img(src=`/img/company/item-${1}.png`, alt="")
-          .transaction__item
-            img(src=`/img/company/item-${2}.png`, alt="")
-          .transaction__bg
-            img(src=`/img/transactions/transaction-wrap.svg`, alt="")
-          p.transaction__type Acquired By
+        .transaction__back
+          h4.transaction__title Bardess Group <i>& Cleartelligence</i>
+          p.transaction__text Backed by: Align Capital Partners
+          p.transaction__description Description
+          .transaction__tags
+            +tag('Data & Analytics')
+            +tag('Data Engineering')
+        .transaction__front
+          .transaction__wrap
+            .transaction__bg
+              img(src=`/img/transactions/transaction-wrap.svg`, alt="")
+            .transaction__from
+              img(src=`/img/company/item-${1}.png`, alt="")
+            .transaction__to
+              img(src=`/img/company/item-${2}.png`, alt="")
+            p.transaction__type Acquired By
 
-        //- img.transaction__img(src=`/img/transactions/item-${i + 1}.png`, alt="")
-        +flags.transaction__flags('USA', 'FRA')
-        .transaction__tags
-          +tag('Data & Analytics')
-          +tag('Data Engineering')
+          +flags.transaction__flags('USA', 'FRA')
+          .transaction__tags
+            +tag('Data & Analytics')
+            +tag('Data Engineering')
 
   .container
     .transactions__btn
