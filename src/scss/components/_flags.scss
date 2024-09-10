@@ -1,0 +1,29 @@
+.flags {
+  display: flex;
+  align-items: center;
+  padding: toRem(6) toRem(10);
+  background-color: #eaeaea;
+  border-radius: toRem(14);
+}
+
+.flags__item {
+  display: flex;
+  align-items: center;
+}
+
+.flags__flag {
+  display: block;
+  width: toRem(16);
+  height: toRem(12);
+}
+
+.flags__to,
+.flags__item ~ .flags__item {
+  margin-left: toRem(6);
+}
+
+.flags__name {
+  margin-left: toRem(4);
+  font-size: toRem(12);
+  line-height: 1.3333;
+}
