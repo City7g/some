@@ -1,0 +1,12 @@
+mixin cardClient(src, fullName, workplace, job, country, countryFlag)
+  .card-client&attributes(attributes)
+    +img-anim(src)
+    p.card-client__full-name= fullName
+    .card-client__info  
+      p.card-client__workplace=workplace
+      .dot-clients
+      p.card-client__job=job 
+      .dot-clients
+      .card-client__country
+        img(src=countryFlag, alt="")
+        p=country
