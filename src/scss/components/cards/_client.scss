@@ -3,24 +3,24 @@
 }
 
 .card-client__full-name {
-  @include s5;
-  margin-top: toRem(16);
+  @include s2;
+  margin-top: toRem(20);
 }
 
 .card-client__info {
   display: flex;
   align-items: center;
   margin-top: toRem(4);
-  @include body7;
+  @include body2;
 
-  >*:not(:last-child) {
-    margin-right: toRem(9);
+  & > *:not(:last-child) {
+    margin-right: toRem(10);
   }
 }
 
 .card-client__country {
   display: flex;
-  
+
   img {
     margin-right: toRem(4);
   }
@@ -30,6 +30,7 @@
   display: inline-flex;
   align-items: center;
   margin-left: auto;
+  @include body6;
 
   &::before {
     content: '';

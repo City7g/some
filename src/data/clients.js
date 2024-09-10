@@ -9,7 +9,7 @@ export const clientsData = [
     linkedinHref: '/',
   },
   {
-    src: 'img/clients/client-item-1.png',
+    src: 'img/clients/item-1.png',
     fullName: 'Mira Carder',
     workplace: 'Hey Inc',
     job: 'Marketing Director',
@@ -18,7 +18,7 @@ export const clientsData = [
     linkedinHref: '/',
   },
   {
-    src: 'img/clients/client-item-2.png',
+    src: 'img/clients/item-2.png',
     fullName: 'Gustavo Korsgaard',
     workplace: 'Sia Partner',
     job: 'CEO',
@@ -27,7 +27,7 @@ export const clientsData = [
     linkedinHref: '/',
   },
   {
-    src: 'img/clients/client-item-3.png',
+    src: 'img/clients/item-3.png',
     fullName: 'Tatiana Bator',
     workplace: 'Sia Partner',
     job: 'CEO',
@@ -36,7 +36,7 @@ export const clientsData = [
     linkedinHref: '/',
   },
   {
-    src: 'img/clients/client-item-4.png',
+    src: 'img/clients/item-4.png',
     fullName: 'Carla Levin',
     workplace: 'Sia Partner',
     job: 'CEO',

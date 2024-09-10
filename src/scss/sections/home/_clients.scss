@@ -87,14 +87,10 @@
 
 .dot-clients {
   overflow: hidden;
-  &::before {
-    content: '.';
-    display: block;
-    width: 4px;
-    height: 4px;
-    background-color: $clients-dot;
-    border-radius: toRem(2);
-  }
+  width: toRem(4);
+  height: toRem(4);
+  background-color: $clients-dot;
+  border-radius: toRem(1);
 }
 
 .clients__main-right {
@@ -106,7 +102,7 @@
   }
   & p {
     @include s1;
-    margin-top: toRem(24);
+    margin-top: toRem(18);
 
     @media screen and (max-width: 1200px) {
       margin-top: toRem(16);
