@@ -147,6 +147,12 @@
   line-height: 1.5;
 }
 
+@mixin s3 {
+  font-family: 'PlayfairDisplay';
+  font-size: 24px;
+  line-height: 1.3333;
+}
+
 @mixin s4 {
   font-size: 22px;
   line-height: 1.45;
@@ -201,5 +207,12 @@
 
 @mixin caption2 {
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.3333;
+}
+
+@mixin caption3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.24px;
 }
