@@ -1,20 +1,16 @@
-.card-client {
-  justify-self: center;
-}
-
 .card-client__full-name {
-  @include s2;
-  margin-top: toRem(20);
+  @include s5;
+  margin-top: toRem(16);
 }
 
 .card-client__info {
   display: flex;
   align-items: center;
   margin-top: toRem(4);
-  @include body2;
+  @include body7;
 
   & > *:not(:last-child) {
-    margin-right: toRem(10);
+    margin-right: toRem(8);
   }
 }
 
@@ -23,21 +19,5 @@
 
   img {
     margin-right: toRem(4);
-  }
-}
-
-.linkedin {
-  display: inline-flex;
-  align-items: center;
-  margin-left: auto;
-  @include body6;
-
-  &::before {
-    content: '';
-    background-image: url(img/icon/linkedin.svg);
-    display: block;
-    width: toRem(24);
-    height: toRem(24);
-    margin-right: toRem(6);
   }
 }

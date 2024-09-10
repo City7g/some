@@ -1,4 +1,4 @@
-mixin cardClient(src, fullName, workplace, job, country, countryFlag, linkedinHref, isShowLinkedin)
+mixin cardClient(src, fullName, workplace, job, country, countryFlag,)
   .card-client&attributes(attributes)
     +img-anim(src)
     p.card-client__full-name= fullName
@@ -10,5 +10,3 @@ mixin cardClient(src, fullName, workplace, job, country, countryFlag, linkedinHr
       .card-client__country
         img(src=countryFlag, alt="")
         p=country
-      if isShowLinkedin
-        a.linkedin(href={linkedinHref}) View Linkedin

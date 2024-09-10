@@ -59,14 +59,10 @@
     max-width: toRem(600);
     width: 100%;
   }
-
-  .clients__image {
-    margin-bottom: toRem(20);
-  }
 }
 
 .clients__descriptions {
-  @include body2;
+  margin-top: toRem(20);
 }
 
 .clients__name {
@@ -76,12 +72,12 @@
 
 .clients__info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  @include body2;
 
-  & div {
-    display: flex;
-    align-items: center;
-    gap: toRem(10);
+  & > *:not(:last-child) {
+    margin-right: toRem(10);
   }
 }
 
@@ -91,6 +87,25 @@
   height: toRem(4);
   background-color: $clients-dot;
   border-radius: toRem(1);
+}
+
+.country {
+  display: flex;
+}
+
+.flag {
+  margin-right: toRem(8);
+}
+
+.linkedin {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.linkedin__text {
+  @include body6;
+  margin-left: toRem(6);
 }
 
 .clients__main-right {
