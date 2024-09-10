@@ -1,9 +1,36 @@
 .commitment {
+  position: relative;
   padding: 257px 0;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
+}
+
+.commitment__img-desktop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.commitment__img-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: none;
+  }
+}
+
+.commitment__content {
+  position: relative;
 }
 
 .commitment__subtitle {

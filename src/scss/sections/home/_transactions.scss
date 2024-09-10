@@ -1,0 +1,106 @@
+.transactions {
+  padding: toRem(80) 0 toRem(100);
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(50) 0;
+  }
+}
+
+.transactions__top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: toRem(16);
+  margin-bottom: toRem(60);
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    margin-bottom: toRem(44);
+  }
+}
+
+.transactions__title {
+  @include h4;
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
+}
+
+.transactions__text {
+  @include body4;
+  color: #828282;
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+  }
+}
+
+.transactions__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: solid #cecfcf;
+  border-width: toRem(1) 0;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  & > * {
+    @media screen and (max-width: $tablet) {
+      &:not(:first-child) {
+        border-top: toRem(1) solid #cecfcf;
+      }
+    }
+
+    @media screen and (min-width: ($tablet + 1)) {
+      &:not(:nth-child(3n + 1)) {
+        border-left: toRem(1) solid #cecfcf;
+      }
+    }
+  }
+}
+
+.transactions__btn {
+  margin-top: toRem(60);
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(44);
+  }
+}
+
+.transaction {
+  position: relative;
+  padding: toRem(79) toRem(20) toRem(76);
+  background-color: #fff;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(72) toRem(16) toRem(64);
+  }
+}
+
+.transaction__flags {
+  position: absolute;
+  top: toRem(20);
+  left: toRem(20);
+
+  @media screen and (max-width: $tablet) {
+    top: toRem(16);
+    left: toRem(16);
+  }
+}
+
+.transaction__tags {
+  position: absolute;
+  right: toRem(20);
+  bottom: toRem(20);
+  display: flex;
+
+  & > * + * {
+    margin-left: toRem(8);
+  }
+
+  @media screen and (max-width: $tablet) {
+    right: toRem(16);
+    bottom: toRem(16);
+  }
+}

@@ -1,0 +1,98 @@
+.second {
+  margin: 180px 0 100px;
+
+  @media screen and (max-width: $tablet) {
+    margin: 100px 0 50px;
+  }
+}
+
+.second__title {
+  margin-bottom: 60px;
+  @include h4;
+  text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 44px;
+    @include h7;
+  }
+}
+
+.second__btn {
+  width: calc(33% - 8px);
+  margin: 60px auto 0;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    margin-top: 44px;
+  }
+}
+
+.second__btn > * {
+  width: 100%;
+}
+
+.authority {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 16px;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.authority__item {
+  padding: 22px 32px 32px;
+  border-radius: 24px 4px;
+  background-color: #f9f9fa;
+
+  @media screen and (max-width: $tablet) {
+    padding: 10px 28px 24px;
+    border-radius: 20px 4px;
+  }
+}
+
+.authority__top {
+  display: flex;
+  margin-bottom: 54px;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 18px;
+  }
+}
+
+.authority__title {
+  @include h2;
+
+  @media screen and (max-width: $tablet) {
+    @include h5;
+  }
+}
+
+.authority__icon {
+  width: 28px;
+  height: 28px;
+  fill: $primary;
+
+  @media screen and (max-width: $tablet) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.authority svg {
+  width: 28px;
+  height: 28px;
+  transform: translateY(10px);
+
+  @media screen and (max-width: $tablet) {
+    width: 24px;
+    height: 24px;
+    transform: translateY(15px);
+  }
+}
+
+.authority__text {
+  @include body7;
+  max-width: 234px;
+}

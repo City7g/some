@@ -1,0 +1,133 @@
+.first {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.first__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 16px 40px;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    padding: 60px 16px 66px;
+  }
+}
+
+.first__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 144px;
+}
+
+.first__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.first__title {
+  max-width: 860px;
+  margin-inline: auto;
+  @include h3;
+
+  @media screen and (max-width: $tablet) {
+    @include h6;
+  }
+}
+
+.first__text {
+  max-width: 720px;
+  margin: 26px auto 0;
+  @include body2;
+  color: #828282;
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+    margin-top: 20px;
+  }
+}
+
+.first__btn {
+  margin-top: 80px;
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 60px;
+  }
+}
+
+.first__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: solid #eaeaea;
+  border-width: 1px 0;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.first__item {
+  padding: 32px 28px 28px 36px;
+
+  &:nth-child(even),
+  &:nth-child(3) {
+    border-left: 1px solid #eaeaea;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 16px 14px 16px 16px;
+
+    &:nth-child(n + 3) {
+      border-top: 1px solid #eaeaea;
+    }
+
+    &:nth-child(3) {
+      border-left: none;
+    }
+  }
+}
+
+.first__item-top {
+  display: flex;
+  align-items: center;
+}
+
+.first__item-icon {
+  fill: $primary;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+
+  @media screen and (max-width: $tablet) {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+}
+
+.first__item h4 {
+  @include s4;
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+  }
+}
+
+.first__item p {
+  margin-top: 8px;
+  @include body7;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}

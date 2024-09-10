@@ -1,28 +1,17 @@
-section.index-first
-  .container
-    .index-first__wrap
-      .index-first__content
-        h1.title-h1.index-first__title
-          | Start Gulp Template
-        p.text-p1.index-first__text
-          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quisquam dolorem magnam corrupti labore accusantium reiciendis voluptatum, quidem ullam quasi dignissimos dolore in expedita doloremque saepe similique quam quas illum.
-        button.btn.btn-dark.index-first__btn
-          i.icon-Storefront.btn__icon
-          | Get Started
-        .list.index-first__list
-          .list__item
-            h4.title-h4.list__title 240k+
-            p.text-p1.list__text Total Sale
-          .list__item
-            h4.title-h4.list__title 100k+
-            p.text-p1.list__text Auctions
-          .list__item
-            h4.title-h4.list__title 240k+
-            p.text-p1.list__text Artists
+- const services = ['Mergers & Acquisitions', 'Capital Advisory', 'Research', 'Financial Advisory']
 
-      .index-first__card
-        .index-first__image
-          +img('/img/artist-head', 'eager')(class="index-first__img")
-        .index-first__info
-          h3.title-h5.index-first__name Space Walking
-          h4.text-p1.index-first__author Animakid
+section.first
+  .first__bg
+  .first__content
+    h1.first__title Bespoke Solutions for Global Clients
+    p.first__text Envoy offers customized advisory solutions across every strategic company milestone through M&amp;A, Capital Advisory, Financial Advisory Services, and Research enabling clients to thrive in the robust Private Markets.
+    button.btn.btn--primary.first__btn Strategic Market Assessment
+
+  .first__list
+    each service in services
+      .first__item
+        .first__item-top
+          svg.first__item-icon
+            use(xlink:href='img/symbol/svg/sprite.symbol.svg#fusion')
+          h4= service
+        p Full-service buyside and sellside M&amp;A advisory.

@@ -69,13 +69,3 @@
     @include body7;
   }
 }
-
-.industry__item {
-  padding: 12px 0 11px;
-  @include body5;
-  border-bottom: 1px solid #242727;
-
-  &:first-child {
-    padding-top: 0;
-  }
-}
