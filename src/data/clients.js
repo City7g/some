@@ -1,5 +1,13 @@
 export const clientsData = [
   {
+    src: 'img/clients/main-person.png',
+    fullName: 'Terry Gouse',
+    workplace: 'Sia Partner',
+    job: 'CEO',
+    country: 'USA',
+    countryFlag: 'img/flags/usa.svg',
+  },
+  {
     src: 'img/clients/client-item-1.png',
     fullName: 'Mira Carder',
     workplace: 'Hey Inc',

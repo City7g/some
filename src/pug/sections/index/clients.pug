@@ -5,20 +5,33 @@ section.clients
       p.clients__text Our reputation is built on the clients we serve whether that is founders, operators or institutional investors
     .clients__main
       .clients__main-left 
-        +img-anim('img/clients/main-person.png')
-        .clients__descriptions 
-          p.clients__name Terry Gouse
-          .clients__info  
-            div
-              p Sia Partner
-              .dot-clients
-              p CEO
-              .dot-clients
-              p USA
-            a.linkedin(href="/") View Linkedin
+        each item in clientsData.slice(0, 1)
+          +cardClient(item.src, item.fullName, item.workplace, item.job, item.country, item.countryFlag)
+
+          //- +img-anim('img/clients/main-person.png')
+          //- .clients__descriptions 
+          //-   p.clients__name Terry Gouse
+          //-   .clients__info  
+          //-     div
+          //-       p Sia Partner
+          //-       .dot-clients
+          //-       p CEO
+          //-       .dot-clients
+          //-       p USA
+          //-     a.linkedin(href="/") View Linkedin
       .clients__main-right
         img.clients__siapartners(src="img/clients/siapartners.svg")
         p.clients__main-text “We commissioned market and industry research and received a comprehensive and informative report that exceeded our expectations. The research team provided data that was not only accurate but also useful for making strategic decisions. Their analytical skills and attention to detail made the report a valuable tool for our business. We are grateful for their professionalism and quality work.”
     .clients__list
-      each item in clientsData
+      each item in clientsData.slice(1)
         +cardClient(item.src, item.fullName, item.workplace, item.job, item.country, item.countryFlag)
+
+  .swiper.clients__slider 
+    .swiper-wrapper   
+      each item in clientsData
+        .swiper-slide 
+          +cardClient(item.src, item.fullName, item.workplace, item.job, item.country, item.countryFlag)
+          .slider__comment
+            img.clients__siapartners(src="img/clients/siapartners.svg")
+            p.clients__main-text “We commissioned market and industry research and received a comprehensive and informative report that exceeded our expectations. The research team provided data that was not only accurate but also useful for making strategic decisions. Their analytical skills and attention to detail made the report a valuable tool for our business. We are grateful for their professionalism and quality work.”
+    .clients-slider__pagination

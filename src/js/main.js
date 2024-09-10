@@ -1,6 +1,8 @@
 import Swiper from 'swiper'
+import { Pagination, Autoplay } from 'swiper/modules'
 
 const some = document.querySelector('.js-insights-slider')
+const clientsSlider = document.querySelector('.clients__slider')
 
 if (some) {
   new Swiper('.js-insights-slider .swiper', {
@@ -16,6 +18,32 @@ if (some) {
     },
   })
 }
+
+// if (clientsSlider) {
+//   new Swiper('.clients__slider .swiper', {
+//     slidesPerView: 1,
+//     breakpoints: {
+//       1024: {
+//         slidesPerView: 3,
+//       },
+//     },
+//     pagination: {
+//       el: '.clients-slider__pagination',
+//       clickable: true,
+//     },
+//   })
+// }
+
+const swiper = new Swiper('.swiper', {
+  modules: [Autoplay, Pagination],
+  slidesPerView: 1.02,
+  spaceBetween: 8,
+  pagination: {
+    el: '.clients-slider__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+})
 
 const burger = document.querySelector('.ui .burger')
 if (burger) {
