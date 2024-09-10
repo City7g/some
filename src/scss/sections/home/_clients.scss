@@ -35,3 +35,125 @@
     color: #828282;
   }
 }
+
+.clients__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: toRem(16);
+  margin-bottom: toRem(60);
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.clients__main-left {
+  max-width: toRem(524);
+
+  @media screen and (max-width: 1000px) {
+    margin: 0 auto;
+    max-width: toRem(600);
+    width: 100%;
+  }
+
+  .clients__image {
+    margin-bottom: toRem(20);
+  }
+}
+
+.clients__descriptions {
+  @include body2;
+}
+
+.clients__name {
+  @include s2;
+  margin-bottom: toRem(4);
+}
+
+.clients__info {
+  display: flex;
+  justify-content: space-between;
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+}
+
+.dot-clients {
+  overflow: hidden;
+  &::before {
+    content: '.';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: $clients-dot;
+    border-radius: toRem(2);
+  }
+}
+
+.clients__main-right {
+  & img {
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+  & p {
+    @include s1;
+    margin-top: toRem(24);
+
+    @media screen and (max-width: 1200px) {
+      margin-top: toRem(16);
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      margin-top: toRem(12);
+      font-size: 24px;
+    }
+  }
+}
+
+.clients__slider {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-inline: toRem(16);
+  max-width: toRem(1312);
+}
+
+.slider__comment {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-top: toRem(32);
+  }
+}
+
+.clients-slider__pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  gap: toRem(0);
+  padding-block: toRem(20);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: $gray;
+  border-radius: toRem(1);
+  width: toRem(6);
+  height: toRem(6);
+  margin: 0 toRem(3);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: $black;
+}

@@ -1,0 +1,42 @@
+.card-client {
+  justify-self: center;
+}
+
+.card-client__full-name {
+  @include s5;
+  margin-top: toRem(16);
+}
+
+.card-client__info {
+  display: flex;
+  align-items: center;
+  margin-top: toRem(4);
+  @include body7;
+
+  >*:not(:last-child) {
+    margin-right: toRem(9);
+  }
+}
+
+.card-client__country {
+  display: flex;
+  
+  img {
+    margin-right: toRem(4);
+  }
+}
+
+.linkedin {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+
+  &::before {
+    content: '';
+    background-image: url(img/icon/linkedin.svg);
+    display: block;
+    width: toRem(24);
+    height: toRem(24);
+    margin-right: toRem(6);
+  }
+}

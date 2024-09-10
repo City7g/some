@@ -3,3 +3,20 @@ section.clients
     .clients__top
       h2.clients__title What Our <i>Clients Say</i>
       p.clients__text Our reputation is built on the clients we serve whether that is founders, operators or institutional investors
+    .clients__main
+      .clients__main-left 
+        each item in clientsData.slice(0, 1)
+          +cardClient(item.src, item.fullName, item.workplace, item.job, item.country, item.countryFlag, item.linkedinHref, true)
+
+      .clients__main-right
+        img.clients__siapartners(src="img/clients/siapartners.svg")
+        p.clients__main-text “We commissioned market and industry research and received a comprehensive and informative report that exceeded our expectations. The research team provided data that was not only accurate but also useful for making strategic decisions. Their analytical skills and attention to detail made the report a valuable tool for our business. We are grateful for their professionalism and quality work.”
+  .swiper.clients__slider 
+    .swiper-wrapper   
+      each item in clientsData
+        .swiper-slide 
+          +cardClient(item.src, item.fullName, item.workplace, item.job, item.country, item.countryFlag, item.linkedinHref, false)
+          .slider__comment
+            img.clients__siapartners(src="img/clients/siapartners.svg")
+            p.clients__main-text “We commissioned market and industry research and received a comprehensive and informative report that exceeded our expectations. The research team provided data that was not only accurate but also useful for making strategic decisions. Their analytical skills and attention to detail made the report a valuable tool for our business. We are grateful for their professionalism and quality work.”
+    .clients-slider__pagination
