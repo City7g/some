@@ -19,31 +19,29 @@ if (some) {
   })
 }
 
-// if (clientsSlider) {
-//   new Swiper('.clients__slider .swiper', {
-//     slidesPerView: 1,
-//     breakpoints: {
-//       1024: {
-//         slidesPerView: 3,
-//       },
-//     },
-//     pagination: {
-//       el: '.clients-slider__pagination',
-//       clickable: true,
-//     },
-//   })
-// }
-
-const swiper = new Swiper('.swiper', {
-  modules: [Autoplay, Pagination],
-  slidesPerView: 1.02,
-  spaceBetween: 8,
-  pagination: {
-    el: '.clients-slider__pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-})
+if (clientsSlider) {
+  new Swiper('.clients__slider.swiper', {
+    modules: [Pagination],
+    slidesPerView: 1.02,
+    spaceBetween: 16,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      900: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+    pagination: {
+      el: '.clients-slider__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  })
+}
 
 const burger = document.querySelector('.ui .burger')
 if (burger) {

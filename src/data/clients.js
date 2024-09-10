@@ -6,6 +6,7 @@ export const clientsData = [
     job: 'CEO',
     country: 'USA',
     countryFlag: 'img/flags/usa.svg',
+    linkedinHref: '/',
   },
   {
     src: 'img/clients/client-item-1.png',
@@ -14,6 +15,7 @@ export const clientsData = [
     job: 'Marketing Director',
     country: 'USA',
     countryFlag: 'img/flags/usa.svg',
+    linkedinHref: '/',
   },
   {
     src: 'img/clients/client-item-2.png',
@@ -22,6 +24,7 @@ export const clientsData = [
     job: 'CEO',
     country: 'USA',
     countryFlag: 'img/flags/usa.svg',
+    linkedinHref: '/',
   },
   {
     src: 'img/clients/client-item-3.png',
@@ -30,6 +33,7 @@ export const clientsData = [
     job: 'CEO',
     country: 'USA',
     countryFlag: 'img/flags/usa.svg',
+    linkedinHref: '/',
   },
   {
     src: 'img/clients/client-item-4.png',
@@ -38,5 +42,6 @@ export const clientsData = [
     job: 'CEO',
     country: 'USA',
     countryFlag: 'img/flags/usa.svg',
+    linkedinHref: '/',
   },
 ]

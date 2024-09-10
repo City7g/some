@@ -97,18 +97,6 @@
   }
 }
 
-.linkedin {
-  display: flex;
-  gap: toRem(6);
-  &::before {
-    content: '';
-    background-image: url(img/icon/linkedin.svg);
-    display: block;
-    width: toRem(24);
-    height: toRem(24);
-  }
-}
-
 .clients__main-right {
   & img {
     @media screen and (max-width: 1000px) {
@@ -132,27 +120,21 @@
   }
 }
 
-.clients__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
-  gap: toRem(16);
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+.clients__slider {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-inline: toRem(16);
+  max-width: toRem(1312);
 }
 
-.clients__slider {
+.slider__comment {
   display: none;
 
   @media screen and (max-width: 768px) {
     display: block;
-    padding-inline: 16px;
+    margin-top: toRem(32);
   }
-}
-
-.slider__comment {
-  margin-top: toRem(32);
 }
 
 .clients-slider__pagination.swiper-pagination-clickable.swiper-pagination-bullets {
@@ -162,7 +144,9 @@
   padding-block: toRem(20);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   background-color: $gray;
   border-radius: toRem(1);
   width: toRem(6);
