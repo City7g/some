@@ -45,7 +45,7 @@ const html = () => {
     .pipe(
       pug({
         data: {
-          mode: process.env.NODE_ENV,
+          mode: 'development',
           image: 'format',
         },
       })
