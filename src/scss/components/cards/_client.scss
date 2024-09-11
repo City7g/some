@@ -1,20 +1,31 @@
-.card-client {
-  justify-self: center;
+.card-client__full-name-section {
+  display: flex;
+  align-items: center;
+  margin-top: toRem(16);
+
+  @media screen and (max-width: 768px) {
+    @include caption2;
+    margin-top: toRem(20);
+  }
 }
 
 .card-client__full-name {
-  @include s2;
-  margin-top: toRem(20);
+  @include s5;
 }
 
 .card-client__info {
   display: flex;
   align-items: center;
   margin-top: toRem(4);
-  @include body2;
+  @include body7;
 
   & > *:not(:last-child) {
-    margin-right: toRem(10);
+    margin-right: toRem(8);
+  }
+
+  @media screen and (max-width: 768px) {
+    @include caption2;
+    margin-top: toRem(8);
   }
 }
 
@@ -26,18 +37,13 @@
   }
 }
 
-.linkedin {
-  display: inline-flex;
-  align-items: center;
-  margin-left: auto;
-  @include body6;
+.card-client__linkedin-icon {
+  display: none;
 
-  &::before {
-    content: '';
-    background-image: url(img/icon/linkedin.svg);
+  @media screen and (max-width: 576px) {
     display: block;
-    width: toRem(24);
-    height: toRem(24);
-    margin-right: toRem(6);
+    width: 24px;
+    height: 24px;
+    margin-left: toRem(8);
   }
 }

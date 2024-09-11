@@ -23,10 +23,9 @@ if (some) {
 if (clientsSlider) {
   new Swiper('.clients__slider.swiper', {
     modules: [Pagination],
-    slidesPerView: 1.02,
-    spaceBetween: 16,
+    slidesPerView: 1,
     breakpoints: {
-      768: {
+      576: {
         slidesPerView: 2,
       },
       900: {
