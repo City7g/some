@@ -25,6 +25,9 @@ section.transactions
             p.transaction__type Acquired By
 
           +flags.transaction__flags('USA', 'FRA')
+          .transaction__backed
+            p.transaction__backed-text Backed by
+            img(src="/img/company/backed.png" alt="")
           .transaction__tags
             +tag('Data & Analytics')
             +tag('Data Engineering')

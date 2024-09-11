@@ -170,6 +170,7 @@
   padding: toRem(4) toRem(11);
   border: toRem(1) solid #242727;
   border-radius: toRem(16);
+  background-color: #fff;
   @include body5;
 }
 
@@ -201,6 +202,28 @@
     right: toRem(16);
     bottom: toRem(16);
   }
+}
+
+.transaction__backed {
+  position: absolute;
+  right: toRem(20);
+  bottom: toRem(70);
+
+  @media screen and (max-width: $tablet) {
+    right: toRem(22);
+    bottom: toRem(63);
+  }
+}
+
+.transaction__backed-text {
+  margin-bottom: toRem(6);
+  @include caption2;
+  color: #636363;
+}
+
+.transaction__backed img {
+  width: toRem(84);
+  max-height: toRem(40);
 }
 
 .transaction__title {
