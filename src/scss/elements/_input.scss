@@ -38,3 +38,20 @@ textarea {
 textarea {
   resize: none;
 }
+
+input[type='text'].input--secondary,
+input[type='email'].input--secondary,
+input[type='password'].input--secondary,
+input[type='tel'].input--secondary {
+  background-color: $white;
+  border-color: $dark-gray;
+  color: $subscribe-text;
+  border-radius: toRem(2);
+  padding: toRem(9) toRem(12) toRem(9) toRem(16);
+  @include body7;
+
+  &::placeholder {
+    opacity: 1;
+    color: $subscribe-text;
+  }
+}

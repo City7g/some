@@ -2,15 +2,32 @@ section.subscribe
   .container
     .subscribe__wrap
       .subscribe__content
-        h2.subscribe__title Subscribe to Our Reports!
-        p.subscribe__text Stay on top of the latest trends in the Private Markets with real-time insights across capital markets, industry benchmarks, and other areas to maximize equity value.
+        h2.subscribe__title <i>Subscribe</i> to Our Reports!
+        p.subscribe__text Stay ahead of competitors. Unlock exclusive market insights and strategic reports. Subscribe for exclusive access to strategic reports and market trends.
 
-        form
-          input(type="text" placeholder="Email")
-          input(type="text" placeholder="Select Areas of Interest")
-          p How often can we send you new reports relevant to your areas of interest?
+        .subscribe-mobile__img 
+          img(src="img/subscribe/subscribe-mobile-img.png", alt="")
 
-          button.btn(type="submit") Subscribe
+        form.subscribe__form
+          p.subscribe__form-title Enter your subscription details
+          input(type="text" placeholder="Email" id="subscribe-email").subscribe__form-email.input--secondary 
+          select(name="select").subscribe__form-interests
+            option(value="0" selected disabled) Select Areas of Interest
+            option(value="1") Interest 1
+            option(value="2") Interest 2
+            option(value="3") Interest 3
+          p.subscribe__form-text How often can we send you new reports relevant to your areas of interest?
+          .checkbox-group 
+            .checkbox-group__item
+              input(type="radio" name="radio" checked)
+              label Weekly
+            .checkbox-group__item
+              input(type="radio" name="radio")
+              label Monthly
+            .checkbox-group__item
+              input(type="radio" name="radio")
+              label Yearly
+          button.btn.subscribe__btn(type="submit") Subscribe
 
-      .subscribe__image
-        img.subscribe__img(src='img/subscribe.png' alt='')
+      .subscribe__img  
+        img(src="img/subscribe/subscribe-desktop-img.png", alt="")

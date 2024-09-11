@@ -1,16 +1,141 @@
 .subscribe {
-  padding: 80px 0;
+  padding: toRem(80) 0;
+  color: $subscribe-text;
+  background-color: $subscribe-bg;
 
   @media screen and (max-width: $tablet) {
     padding-bottom: 44px;
   }
 }
 
-.subscribe__title {
-  margin-bottom: 36px;
-  @include h2;
+.subscribe__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: toRem(16);
 
   @media screen and (max-width: $tablet) {
-    margin-bottom: 16px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.subscribe__content {
+  max-width: toRem(524);
+
+  @media screen and (max-width: $tablet) {
+    margin: 0 auto;
+  }
+}
+
+.subscribe__title {
+  margin-bottom: toRem(36);
+  color: $black;
+  @include h1;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(16);
+    font-size: toRem(32);
+    line-height: toRem(40);
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: toRem(230);
+  }
+}
+
+.subscribe__text {
+  @include body2;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(44);
+    @include body7;
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: toRem(299);
+  }
+}
+
+.subscribe-mobile__img img {
+  display: none;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.subscribe__form {
+  margin-top: toRem(50);
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(44);
+  }
+}
+
+.subscribe__form-title {
+  @include s1;
+  color: $black;
+  margin-bottom: toRem(24);
+
+  @media screen and (max-width: $tablet) {
+    font-size: toRem(20);
+    line-height: toRem(28);
+  }
+}
+
+.subscribe__form-email {
+  margin-bottom: toRem(16);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(20);
+  }
+}
+
+.subscribe__form-interests {
+  margin-bottom: toRem(24);
+}
+
+.subscribe__form-text {
+  max-width: toRem(347);
+  margin-bottom: toRem(14);
+  @include body4;
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+  }
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: toRem(8);
+  margin-bottom: toRem(40);
+}
+
+.checkbox-group__item {
+  display: flex;
+  align-items: center;
+  padding: toRem(8) toRem(12);
+  border: toRem(1) solid #636363;
+  border-radius: toRem(2);
+  position: relative;
+
+  label {
+    font-size: toRem(14);
+    line-height: toRem(20);
+    margin-left: toRem(8);
+  }
+
+  input:checked + label {
+    color: #6d46dc;
+  }
+}
+
+.subscribe__img img {
+  display: block;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
   }
 }
