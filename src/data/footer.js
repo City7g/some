@@ -3,15 +3,11 @@ export const footerLinks = [
     title: 'M&A',
     links: [
       {
-        text: 'Performance Improvement',
+        text: 'Buy Side Advisory',
         href: '/',
       },
       {
-        text: 'Valuation',
-        href: '/',
-      },
-      {
-        text: 'Transaction Advisory Services',
+        text: 'Sell Side Advisory',
         href: '/',
       },
     ],
@@ -37,11 +33,11 @@ export const footerLinks = [
     title: 'Capital Advisory',
     links: [
       {
-        text: 'Buy Side Advisory',
+        text: 'Debt Capital Advisory',
         href: '/',
       },
       {
-        text: 'Sell Side Advisory',
+        text: 'Equity Capital Advisory',
         href: '/',
       },
     ],
@@ -50,11 +46,15 @@ export const footerLinks = [
     title: 'Financial Advisory Services',
     links: [
       {
-        text: 'Debt Capital Advisory',
+        text: 'Performance Improvement',
         href: '/',
       },
       {
-        text: 'Equity Capital Advisory',
+        text: 'Valuation',
+        href: '/',
+      },
+      {
+        text: 'Transaction Advisory Services',
         href: '/',
       },
     ],
