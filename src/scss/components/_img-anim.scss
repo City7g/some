@@ -1,4 +1,4 @@
-.img-anim__image {
+.img-anim {
   overflow: hidden;
   position: relative;
   border-radius: toRem(32) toRem(4);
@@ -26,7 +26,7 @@
   }
 }
 
-.img-anim__image-text {
+.img-anim__text {
   display: flex;
   position: absolute;
   top: 50%;
@@ -40,9 +40,9 @@
   animation-delay: 0.3s;
 }
 
-.img-anim__image {
+.img-anim {
   @include hover {
-    & .img-anim__image-text {
+    & .img-anim__text {
       opacity: 1;
       animation-play-state: running;
       animation-delay: 0.3s;
@@ -59,20 +59,20 @@
   }
 }
 
-.img-anim__image-text > *:nth-child(even) {
+.img-anim__text > *:nth-child(even) {
   font-family: $secondary-font;
   font-size: toRem(32);
   line-height: 1.5;
   font-style: italic;
 }
 
-.img-anim__image-text > *:nth-child(odd) {
+.img-anim__text > *:nth-child(odd) {
   font-family: $main-font;
   font-size: toRem(32);
   line-height: 1.5;
 }
 
-.img-anim__image-text > * {
+.img-anim__text > * {
   position: relative;
   padding-left: toRem(42);
 

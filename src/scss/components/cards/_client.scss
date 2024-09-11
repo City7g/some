@@ -44,6 +44,7 @@
 
 .card-client__country {
   display: flex;
+  align-items: center;
 
   img {
     margin-right: toRem(4);
@@ -74,6 +75,6 @@
   margin-bottom: toRem(12);
 }
 
-.card-client__partner {
+.card-client__partners img {
   display: block;
 }
