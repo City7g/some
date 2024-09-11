@@ -1,7 +1,7 @@
 export const clientsData = [
   {
     src: 'img/clients/main-person.png',
-    fullName: 'Terry Gouse',
+    name: 'Name',
     workplace: 'Sia Partner',
     job: 'CEO',
     country: 'USA',
@@ -9,7 +9,7 @@ export const clientsData = [
   },
   {
     src: 'img/clients/item-1.png',
-    fullName: 'Mira Carder',
+    name: 'Mira Carder',
     workplace: 'Hey Inc',
     job: 'Marketing Director',
     country: 'USA',
@@ -17,7 +17,7 @@ export const clientsData = [
   },
   {
     src: 'img/clients/item-2.png',
-    fullName: 'Gustavo Korsgaard',
+    name: 'Gustavo Korsgaard',
     workplace: 'Sia Partner',
     job: 'CEO',
     country: 'USA',
@@ -25,7 +25,7 @@ export const clientsData = [
   },
   {
     src: 'img/clients/item-3.png',
-    fullName: 'Tatiana Bator',
+    name: 'Tatiana Bator',
     workplace: 'Sia Partner',
     job: 'CEO',
     country: 'USA',
@@ -33,7 +33,7 @@ export const clientsData = [
   },
   {
     src: 'img/clients/item-4.png',
-    fullName: 'Carla Levin',
+    name: 'Carla Levin',
     workplace: 'Sia Partner',
     job: 'CEO',
     country: 'USA',

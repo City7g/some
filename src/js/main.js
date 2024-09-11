@@ -36,8 +36,8 @@ if (clientsSlider) {
       },
     },
     pagination: {
-      el: '.clients-slider__pagination',
-      type: 'bullets',
+      el: '.clients__pagination',
+      // type: 'bullets',
       clickable: true,
     },
   })

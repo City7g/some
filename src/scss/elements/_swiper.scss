@@ -1,0 +1,18 @@
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --swiper-pagination-bullet-horizontal-gap: #{toRem(3)};
+  margin-top: toRem(28);
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: #{toRem(6)};
+  --swiper-pagination-bullet-border-radius: #{toRem(1)};
+  --swiper-pagination-bullet-inactive-color: #eaeaea;
+  --swiper-pagination-color: #28231e;
+}
