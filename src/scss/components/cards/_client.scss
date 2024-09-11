@@ -1,6 +1,16 @@
+.card-client__full-name-section {
+  display: flex;
+  align-items: center;
+  margin-top: toRem(16);
+
+  @media screen and (max-width: 768px) {
+    @include caption2;
+    margin-top: toRem(20);
+  }
+}
+
 .card-client__full-name {
   @include s5;
-  margin-top: toRem(16);
 }
 
 .card-client__info {
@@ -12,6 +22,11 @@
   & > *:not(:last-child) {
     margin-right: toRem(8);
   }
+
+  @media screen and (max-width: 768px) {
+    @include caption2;
+    margin-top: toRem(8);
+  }
 }
 
 .card-client__country {
@@ -19,5 +34,16 @@
 
   img {
     margin-right: toRem(4);
+  }
+}
+
+.card-client__linkedin-icon {
+  display: none;
+
+  @media screen and (max-width: 576px) {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: toRem(8);
   }
 }
