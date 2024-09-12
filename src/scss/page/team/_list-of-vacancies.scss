@@ -1,0 +1,118 @@
+.list-of-vacancies__available-block {
+  padding: toRem(80) 0 toRem(100) 0;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(60) 0 0 0;
+  }
+}
+
+.list-of-vacancies__occupied-block {
+  padding: toRem(80) 0 toRem(140) 0;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(60) 0 toRem(60) 0;
+  }
+}
+
+.list-of-vacancies__sub-title {
+  @include h5;
+  margin-bottom: toRem(60);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(36);
+    font-size: toRem(32);
+    line-height: toRem(40);
+  }
+}
+
+.list-of-vacancies__available-cards,
+.list-of-vacancies__occupied-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: toRem(16);
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list-of-vacancies__available-btn,
+.list-of-vacancies__occupied-btn {
+  display: none;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+    width: 100%;
+    border-radius: toRem(2);
+    margin-top: toRem(36);
+    height: 44px; // удали, это для pixel perfect
+  }
+}
+
+.tell-us__wrap--light {
+  display: none;
+
+  @media screen and (max-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: toRem(30);
+    background-color: #f9f9fa;
+    padding: toRem(16) toRem(16) toRem(44) toRem(16);
+    position: relative;
+  }
+}
+
+.tell-us__bg-one--light {
+  position: absolute;
+  top: toRem(0);
+  right: toRem(0);
+}
+
+.tell-us__title--light {
+  @include h4;
+  margin-bottom: 58px;
+}
+
+.tell-us__subtitle--light {
+  @include body5;
+  margin-bottom: 6px;
+  color: #242727;
+}
+
+.tell-us__text--light {
+  @include body7;
+  color: #636363;
+}
+
+.tell-us__form--light {
+  margin-top: toRem(80);
+  position: relative;
+}
+
+.tell-us__bg-two--light {
+  position: absolute;
+  top: toRem(-70);
+  right: toRem(0);
+}
+
+.tell-us__form-title--light {
+  @include h7;
+  margin-bottom: 32px;
+}
+
+.tell-form--light {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(162px, 1fr));
+  gap: toRem(20);
+}
+
+.tell-form--light textarea,
+.tell-form--light button {
+  grid-column: 1 / -1;
+}
+
+.tell-form--light textarea {
+  height: toRem(140);
+  margin-bottom: toRem(12);
+  padding: toRem(10) toRem(12) toRem(0) toRem(16);
+}

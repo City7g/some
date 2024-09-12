@@ -1,0 +1,28 @@
+.date__info {
+  display: flex;
+  align-items: center;
+}
+
+.date__number {
+  padding: toRem(6) toRem(10);
+  @include caption2;
+  background-color: #eaeaea;
+  border-radius: toRem(30);
+}
+
+.date__calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #28231e;
+  border: 2px solid #eaeaea;
+}
+
+.date__calendar svg {
+  width: toRem(16);
+  height: toRem(16);
+  fill: #e8e5ff;
+}
