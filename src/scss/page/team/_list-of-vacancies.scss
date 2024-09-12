@@ -71,6 +71,7 @@
 .tell-us__title--light {
   @include h4;
   margin-bottom: 58px;
+  max-width: toRem(251);
 }
 
 .tell-us__subtitle--light {
