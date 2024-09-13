@@ -3,10 +3,6 @@
 
   @media screen and (max-width: $tablet) {
     padding: toRem(32) toRem(36);
-
-    &:nth-child(n + 4) {
-      display: none;
-    }
   }
 }
 

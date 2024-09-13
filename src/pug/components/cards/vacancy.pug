@@ -1,0 +1,13 @@
+mixin cardVacancy(item, isWhite = false)
+  .card-vacancy(class=`${isWhite ? 'card-vacancy--white' : ''}`)&attributes(attributes)
+    .card-vacancy__top 
+      +date('June 25, 2024')
+      .card-vacancy__location  
+        img.card-vacancy__location-flag(src='img/flags/usa.svg', alt="")
+        p New York, USA
+
+    .card-vacancy__title Senior Market Analyst
+    .card-vacancy__text We are looking for a Senior Market Analyst to join our team and contribute to our company’s growth by providing in-depth analysis of market trends, competitive landscapes, and consumer preferences. The ideal candidate will be responsible for developing strategies that help our clients achieve their business goals.
+    
+    if(!isWhite)
+      button.btn.card-vacancy__btn View Vacancy Details
