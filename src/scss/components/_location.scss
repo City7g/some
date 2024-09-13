@@ -1,0 +1,15 @@
+.locatoion {
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: toRem(6) toRem(10);
+  border-radius: toRem(29);
+  @include caption2;
+}
+
+.locatoion__flag {
+  display: block;
+  width: toRem(16);
+  height: toRem(12);
+  margin-right: toRem(4);
+}

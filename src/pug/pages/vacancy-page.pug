@@ -1,0 +1,59 @@
+extends ../layouts/main
+
+block content
+  section.vacancy-page
+    .vacancy-page__bg-1 
+      img(src="img/team-page/vacancy-page/vacancy-page-cell.png", alt="")
+    .vacancy-page__bg-2 
+      img(src="img/team-page/vacancy-page/vacancy-page-cell.png", alt="")
+    .vacancy-page__bg-3 
+      img(src="img/team-page/vacancy-page/vacancy-page-left-top-bg.png", alt="")
+    .vacancy-page__bg-4 
+      img(src="img/team-page/vacancy-page/vacancy-page-left-buttom-bg.png", alt="")
+    .vacancy-page__bg-5 
+      img(src="img/team-page/vacancy-page/vacancy-page-right-top-bg.png", alt="")
+    .vacancy-page__bg-6 
+      img(src="img/team-page/vacancy-page/vacancy-page-right-bottom-bg.png", alt="")
+
+    .vacancy-page__top 
+      a(href="/").vacancy-page__top-link Careers
+      .vacancy-page__slash /
+      a(href="/") Senior Market Analyst
+  
+    .container 
+      .vacancy-page__main
+        .vacancy-page__main-header
+          h4.vacancy-page__main-title Senior Market Analyst
+          .vacancy-page__detail
+            +date('June 25, 2024')
+            +location('img/flags/usa.svg', 'New York, USA')
+
+        .vacancy-page__content
+          each item in vacanciesData.content
+            if(item.title)
+              h2= item.title
+            if(item.subtitle)
+              h3= item.subtitle
+            if(item.text)
+              p= item.text
+            if(item.list)
+              ul
+                each li in item.list
+                  li=li
+          
+            
+    .vacancy-page__bottom
+      .vacancy-page__bg-7
+        img(src="img/team-page/vacancy-page/vacancy-page-bottom-1.png", alt="")
+      .vacancy-page__bg-7-mobile 
+        img(src="img/team-page/vacancy-page/vacancy-page-bottom-1-mobile.png", alt="")
+      .vacancy-page__bg-8 
+        img(src="img/team-page/vacancy-page/vacancy-page-bottom-2.png", alt="")
+      .vacancy-page__bg-8-mobile
+        img(src="img/team-page/vacancy-page/vacancy-page-bottom-2-mobile.png", alt="")
+
+      .vacancy-page__bottom-content
+        .container
+          h4.vacancy-page__bottom-title Join our team and build the future with us!
+          p.vacancy-page__bottom-text We look forward to your application and the opportunity to work together!
+          button.btn.vacancy-page__bottom-btn Apply Now!
