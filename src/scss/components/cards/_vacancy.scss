@@ -31,23 +31,6 @@
   }
 }
 
-.card-vacancy__location {
-  display: flex;
-  align-items: center;
-  margin-left: toRem(16);
-  background-color: #eaeaea;
-  padding: toRem(6) toRem(10);
-  border-radius: toRem(29);
-  @include caption2;
-}
-
-.card-vacancy__locatoion img {
-  display: block;
-  width: toRem(16);
-  height: toRem(12);
-  margin-right: toRem(4);
-}
-
 .card-vacancy__title {
   @include s2;
 

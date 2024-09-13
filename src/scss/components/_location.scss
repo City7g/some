@@ -1,4 +1,4 @@
-.locatoion {
+.location {
   display: flex;
   align-items: center;
   background-color: #eaeaea;
@@ -7,7 +7,7 @@
   @include caption2;
 }
 
-.locatoion__flag {
+.location__flag {
   display: block;
   width: toRem(16);
   height: toRem(12);

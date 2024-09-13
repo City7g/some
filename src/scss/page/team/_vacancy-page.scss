@@ -97,8 +97,12 @@
 }
 
 .vacancy-page__detail {
-  display: grid;
-  grid-template-columns: toRem(150) toRem(153);
+  display: flex;
+  align-items: center;
+
+  & > * + * {
+    margin-left: toRem(12);
+  }
 }
 
 .vacancy-page__content {
