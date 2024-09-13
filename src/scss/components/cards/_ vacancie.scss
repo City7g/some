@@ -1,9 +1,8 @@
-.card-vacancies,
-.card-vacancies-occupied {
-  padding: toRem(36) toRem(40) toRem(0) toRem(40);
+.card-vacancy {
+  padding: toRem(36) toRem(40);
 
   @media screen and (max-width: $tablet) {
-    padding: toRem(32) toRem(36) toRem(0) toRem(36);
+    padding: toRem(32) toRem(36);
 
     &:nth-child(n + 4) {
       display: none;
@@ -11,12 +10,12 @@
   }
 }
 
-.card-vacancies {
+.card-vacancy {
   background-color: #f9f9fa;
   border-radius: toRem(4) toRem(24);
 }
 
-.card-vacancies-occupied {
+.card-vacancy--white {
   background-color: #ffffff;
   border: toRem(1) solid #eaeaea;
   border-radius: toRem(24) toRem(4);
@@ -26,7 +25,7 @@
   }
 }
 
-.card-vacancies__top {
+.card-vacancy__top {
   display: flex;
   align-items: center;
   margin-bottom: toRem(16);
@@ -36,8 +35,24 @@
   }
 }
 
-.card-vacancies__title-occupied,
-.card-vacancies__title {
+.card-vacancy__location {
+  display: flex;
+  align-items: center;
+  margin-left: toRem(16);
+  background-color: #eaeaea;
+  padding: toRem(6) toRem(10);
+  border-radius: toRem(29);
+  @include caption2;
+}
+
+.card-vacancy__locatoion img {
+  display: block;
+  width: toRem(16);
+  height: toRem(12);
+  margin-right: toRem(4);
+}
+
+.card-vacancy__title {
   @include s2;
 
   @media screen and (max-width: $tablet) {
@@ -45,7 +60,7 @@
   }
 }
 
-.card-vacancies__title {
+.card-vacancy__title {
   margin-bottom: toRem(8);
 
   @media screen and (max-width: $tablet) {
@@ -53,7 +68,7 @@
   }
 }
 
-.card-vacancies__title-occupied {
+.card-vacancy--white .card-vacancy__title {
   margin-bottom: toRem(10);
 
   @media screen and (max-width: $tablet) {
@@ -61,38 +76,19 @@
   }
 }
 
-.card-vacancies__text,
-.card-vacancies__text-occupied {
+.card-vacancy__text {
   @include body7;
   color: #828282;
   max-width: toRem(552);
   height: toRem(88);
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  @include line-clamp(4);
 }
 
-.card-vacancies__text {
-  margin-bottom: toRem(40);
-
-  @media screen and (max-width: $tablet) {
-    margin-bottom: toRem(36);
-  }
-}
-
-.card-vacancies__text-occupied {
-  margin-bottom: toRem(42);
-
-  @media screen and (max-width: $tablet) {
-    margin-bottom: toRem(34);
-  }
-}
-
-.card-vacancies__btn {
-  margin-bottom: toRem(36);
+.card-vacancy__btn {
+  margin: toRem(40) 0 toRem(8);
   width: 100%;
-  height: 44px; // удали, это для pixel perfect
+
+  @media screen and (max-width: $tablet) {
+    margin: toRem(36) 0 toRem(0);
+  }
 }

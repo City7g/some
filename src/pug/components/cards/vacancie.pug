@@ -1,19 +1,12 @@
-mixin cardVacancie(item, isAvailable)
-  if isAvailable
-    .card-vacancies&attributes(attributes)
-      .card-vacancies__top 
-        +date(item.date)
-        +location(item.countryFlag, item.location)
+mixin cardVacancy(item, isWhite = false)
+  .card-vacancy(class=`${isWhite ? 'card-vacancy--white' : ''}`)&attributes(attributes)
+    .card-vacancy__top 
+      +date(item.date)
+      .card-vacancy__location  
+        img.card-vacancy__location-flag(src=item.countryFlag alt="")
+        p=item.location
 
-      .card-vacancies__title= item.job
-      .card-vacancies__text= item.description
+    .card-vacancy__title= item.job
+    .card-vacancy__text= item.description
 
-      button.btn.card-vacancies__btn View Vacancy Details
-  else 
-    .card-vacancies-occupied&attributes(attributes)
-      .card-vacancies__top 
-        +date(item.date)
-        +location('img/flags/usa.svg', 'New York, USA')
-
-      .card-vacancies__title-occupied= item.job
-      .card-vacancies__text-occupied= item.description
+    button.btn.card-vacancy__btn View Vacancy Details
