@@ -122,4 +122,4 @@ if (timer) {
   updateTimer()
 }
 
-gsap.registerPlugin(Flip)
+// gsap.registerPlugin(Flip)

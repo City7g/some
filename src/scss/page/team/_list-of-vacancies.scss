@@ -1,4 +1,4 @@
-.list-of-vacancies__available-block {
+.vacancies__available-block {
   padding: toRem(80) 0 toRem(100) 0;
 
   @media screen and (max-width: $tablet) {
@@ -6,7 +6,7 @@
   }
 }
 
-.list-of-vacancies__occupied-block {
+.vacancies__occupied-block {
   padding: toRem(80) 0 toRem(140) 0;
 
   @media screen and (max-width: $tablet) {
@@ -14,7 +14,7 @@
   }
 }
 
-.list-of-vacancies__sub-title {
+.vacancies__sub-title {
   @include h5;
   margin-bottom: toRem(60);
 
@@ -25,8 +25,8 @@
   }
 }
 
-.list-of-vacancies__available-cards,
-.list-of-vacancies__occupied-cards {
+.vacancies__available-cards,
+.vacancies__occupied-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: toRem(16);
@@ -36,8 +36,8 @@
   }
 }
 
-.list-of-vacancies__available-btn,
-.list-of-vacancies__occupied-btn {
+.vacancies__available-btn,
+.vacancies__occupied-btn {
   display: none;
 
   @media screen and (max-width: $tablet) {

@@ -1,0 +1,22 @@
+extends ../layouts/main
+
+//- block variables
+//-   - const title = 'List Of Vacancies' 
+
+block content
+  section.vacancies
+    .container
+      .vacancies__wrap 
+        .vacancies__available-block
+          h5.vacancies__sub-title Available <i>Vacancies</i>
+          .vacancies__available-cards
+            each item in vacanciesData
+              +cardVacancy(item)
+          button.btn.vacancies__available-btn Load More
+
+        .vacancies__occupied-block
+          h5.vacancies__sub-title Occupied <i>Vacancies</i>
+          .vacancies__occupied-cards
+            each item in vacanciesData
+              +cardVacancy(item, true)
+          button.btn.vacancies__occupied-btn Load More
