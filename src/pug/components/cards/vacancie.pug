@@ -3,9 +3,7 @@ mixin cardVacancie(item, isAvailable)
     .card-vacancies&attributes(attributes)
       .card-vacancies__top 
         +date(item.date)
-        .card-vacancies__locatoion  
-          img.card-vacancies__locatoion-flag(src=item.countryFlag alt="")
-          p=item.location
+        +location(item.countryFlag, item.location)
 
       .card-vacancies__title= item.job
       .card-vacancies__text= item.description
@@ -15,9 +13,7 @@ mixin cardVacancie(item, isAvailable)
     .card-vacancies-occupied&attributes(attributes)
       .card-vacancies__top 
         +date(item.date)
-        .card-vacancies__locatoion  
-          img.card-vacancies__locatoion-flag(src=item.countryFlag alt="")
-          p=item.location
+        +location('img/flags/usa.svg', 'New York, USA')
 
       .card-vacancies__title-occupied= item.job
       .card-vacancies__text-occupied= item.description
