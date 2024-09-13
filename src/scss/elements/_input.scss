@@ -42,16 +42,37 @@ textarea {
 input[type='text'].input--secondary,
 input[type='email'].input--secondary,
 input[type='password'].input--secondary,
-input[type='tel'].input--secondary {
+input[type='tel'].input--secondary,
+textarea.textarea--secondary {
   background-color: $white;
   border-color: $dark-gray;
   color: $subscribe-text;
   border-radius: toRem(2);
-  padding: toRem(9) toRem(12) toRem(9) toRem(16);
+  padding: toRem(9) toRem(12) toRem(7) toRem(16);
+  transition: 0.2s all ease;
   @include body7;
 
   &::placeholder {
     opacity: 1;
     color: $subscribe-text;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    border-color: #28231E;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }

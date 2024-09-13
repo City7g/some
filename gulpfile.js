@@ -8,6 +8,7 @@ import gcmq from 'gulp-group-css-media-queries'
 import cleanCSS from 'gulp-clean-css'
 
 import config from './webpack.config.js'
+import { vacanciesData } from './src/data/vacation-database.js'
 import { clientsData } from './src/data/clients.js'
 import { footerLinks } from './src/data/footer.js'
 
@@ -52,7 +53,8 @@ const html = () => {
           mode: 'development',
           image: 'format',
           clientsData: clientsData,
-          footerLinks: footerLinks
+          footerLinks: footerLinks,
+          vacanciesData: vacanciesData,
         },
       })
     )
