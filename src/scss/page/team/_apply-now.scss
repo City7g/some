@@ -1,0 +1,121 @@
+.apply-now {
+  margin-bottom: toRem(140);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(44);
+  }
+}
+
+.apply-now__wrap {
+  display: grid;
+  // grid-template-columns: repeat(2, minmax(toRem(604), 1fr));
+  grid-template-columns: toRem(632) toRem(604);
+  gap: toRem(44);
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apply-now__title {
+  @include h1;
+  margin-bottom: toRem(32);
+  margin-top: toRem(5);
+
+  @media screen and (max-width: $tablet) {
+    @include h4;
+    margin-bottom: toRem(20);
+  }
+}
+
+.apply-now__text {
+  @include body2;
+  color: #636363;
+  margin-bottom: toRem(36);
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+  }
+}
+
+.apply-now__form-title {
+  @include h4;
+  margin-bottom: toRem(24);
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
+}
+
+.apply-now__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(toRem(161.5), 1fr));
+  gap: toRem(24);
+
+  @media screen and (max-width: $tablet) {
+    gap: toRem(20);
+
+    & > :nth-child(n + 3) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.apply-now__form input:nth-last-of-type(1),
+.apply-now__form textarea,
+.apply-now__form button,
+.upload-block {
+  grid-column: 1 / -1;
+}
+
+.apply-now__form textarea {
+  height: toRem(140);
+}
+
+.upload-block {
+  margin-top: toRem(28);
+  margin-bottom: toRem(20);
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(20);
+    margin-bottom: toRem(4);
+  }
+}
+
+.upload-block__title {
+  @include s1;
+  margin-bottom: toRem(20);
+
+  @media screen and (max-width: $tablet) {
+    @include s5;
+    margin-top: toRem(16);
+  }
+}
+
+.upload-label {
+  @include body7;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px dashed #cecfcf;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  padding: toRem(103) 0 toRem(55) 0;
+}
+
+.upload-label img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: toRem(48);
+}
+
+.upload-label span {
+  color: #6d46dc;
+}
+
+.upload {
+  display: none;
+}

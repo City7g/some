@@ -1,0 +1,27 @@
+extends ../layouts/main
+
+block content
+  section.apply-now
+    .container
+      .apply-now__wrap 
+        .apply-now__content 
+          h1.apply-now__title Apply <i>Now</i>
+          p.apply-now__text Take the opportunity to develop your career with us. If you are looking for growth, new challenges or a fresh start, now is the time to take the next step. Join a team that values your skills and ambitions - start your journey today!
+          +cardVacancy(item, true)
+        .apply-now__form-column
+          h4.apply-now__form-title Tell Us <i>About Yourself</i>
+          form.apply-now__form
+            input(type="text" placeholder="First Name").input--secondary
+            input(type="text" placeholder="Last Name").input--secondary
+            input(type="text" placeholder="Email").input--secondary
+            input(type="text" placeholder="Phone Number").input--secondary
+            input(type="text" placeholder="GPA").input--secondary
+            input(type="text" placeholder="Graduation Year").input--secondary
+            input(type="text" placeholder="University or College").input--secondary
+            textarea(placeholder="Write a message...(Optional)").textarea--secondary
+            .upload-block
+              h4.upload-block__title Resume Upload
+              label.upload-label(for="file-upload") Drag & drop your files here or <span>Browse Files</span>
+                img(src="img/team-page/file.svg", alt="")
+              input.upload(type="file" name="resume")
+            button.btn(type="submit") Send
