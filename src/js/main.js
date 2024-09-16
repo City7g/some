@@ -1,6 +1,9 @@
 import Swiper from 'swiper'
 import { Pagination, Autoplay } from 'swiper/modules'
 // import { gsap, Flip } from 'gsap/all'
+import validation from './validation.js'
+
+validation()
 
 const some = document.querySelector('.js-insights-slider')
 const clientsSlider = document.querySelector('.clients__slider')

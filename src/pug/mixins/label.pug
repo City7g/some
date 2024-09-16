@@ -1,0 +1,5 @@
+mixin label(name, placeholder, type = 'text', required = true)
+  label.label
+    span.form-field.required
+      input(type=type, data-name=name, name=name, placeholder=`${placeholder}`, required=required)
+    span.errorText Error
