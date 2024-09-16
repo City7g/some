@@ -86,7 +86,7 @@
 @mixin h1 {
   font-family: 'PlayfairDisplay';
   font-size: 80px;
-  line-height: 1.075;
+  line-height: toRem(86);
 }
 
 @mixin h2 {
@@ -107,7 +107,7 @@
 @mixin h4 {
   font-family: 'PlayfairDisplay';
   font-size: 48px;
-  line-height: 1.3333;
+  line-height: toRem(64);
 }
 
 @mixin h5 {
@@ -160,7 +160,7 @@
 
 @mixin s5 {
   font-size: 20px;
-  line-height: 1.4;
+  line-height: toRem(28);
 }
 
 @mixin body1 {
@@ -171,8 +171,8 @@
 }
 
 @mixin body2 {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: toRem(18);
+  line-height: toRem(28);
 }
 
 @mixin body3 {
@@ -202,7 +202,7 @@
 
 @mixin body7 {
   font-size: 14px;
-  line-height: 1.57;
+  line-height: toRem(22);
 }
 
 @mixin caption2 {
