@@ -1,0 +1,120 @@
+.press-release {
+  padding: toRem(188) 0 toRem(140);
+
+  @media screen and (max-width: $tablet) {
+   padding: toRem(152) 0 toRem(100);
+  }
+}
+
+.press-release__wrap {
+  max-width: toRem(856);
+  margin: 0 auto;
+}
+
+.press-release__title {
+  @include h4;
+  margin-bottom: toRem(24);
+  max-width: toRem(733);
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+    margin-bottom: toRem(20);
+  }
+}
+
+.press-release__tags {
+  @include caption2;
+  display: flex;
+  margin-top: toRem(24);
+  padding-bottom: toRem(44);
+  margin-bottom: toRem(44);
+  border-bottom: toRem(1) solid #d7d7d7;
+  color: #636363;
+
+  @media screen and (max-width: $tablet) {
+    margin: toRem(20) 0 toRem(48) 0;
+  }
+}
+
+.press-release__tag {
+  border: toRem(1) solid #636363;
+  padding: toRem(3) toRem(7);
+
+  &:not(:last-child) {
+    margin-right: toRem(8);
+  }
+}
+
+.press-release__content-block {
+  &:not(:last-child) {
+    margin-bottom: toRem(44);
+  }
+
+  @media screen and (max-width: $tablet) {
+    &:not(:last-child) {
+      margin-bottom: toRem(36);
+    }
+  }
+}
+
+.press-release__subtitle {
+  @include s1;
+  margin-bottom: toRem(16);
+
+  @media screen and (max-width: $tablet) {
+    @include s4;
+    margin-bottom: toRem(12);
+  }
+}
+
+.press-release__text,
+.press-release__list {
+  @include body2;
+  color: #636363;
+
+  @media screen and (max-width: $tablet) {
+    @include body4;
+  }
+}
+
+.press-release__list {
+  margin-top: toRem(16);
+  margin-left: toRem(36);
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(12);
+  }
+}
+
+.press-release__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: toRem(12);
+  }
+}
+
+.press-release__item::before {
+  content: '';
+  position: absolute;
+  top: toRem(12);
+  left: toRem(-24);
+  width: toRem(4);
+  height: toRem(4);
+  background-color: #5f5f5f;
+  border-radius: toRem(1);
+}
+
+.press-release__container {
+  @media screen and (max-width: $tablet) {
+    display: contents;
+  }
+}
+
+.press-release__share {
+  margin-top: toRem(100);
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(60);
+  }
+}

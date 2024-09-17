@@ -1,0 +1,16 @@
+mixin share(flagSrc, place)
+  .share&attributes(attributes)
+    p.share__text Share this Report
+    .share__icons
+      a(href="/").share__icon 
+        svg
+          use(xlink:href='img/sprite.symbol.svg#x')
+      a(href="/").share__icon 
+        svg
+          use(xlink:href='img/sprite.symbol.svg#linkedin')
+      a(href="/").share__icon 
+        svg
+          use(xlink:href='img/sprite.symbol.svg#x')
+      a(href="/").share__icon 
+        svg
+          use(xlink:href='img/sprite.symbol.svg#facebook')
