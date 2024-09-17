@@ -1,0 +1,29 @@
+
+extends ../layouts/main
+
+block content
+  - const li = ['Enhance Innovation: The merger will facilitate greater collaboration between the research and development teams of both companies, fostering an environment of innovation and accelerating the development of cutting-edge technology solutions.', 'Expand Market Reach: The combined entity will benefit from an expanded customer base and a broader geographical presence, allowing for more robust market penetration and increased sales opportunities.', 'Strengthen Product Offerings: Leveraging the expertise of both companies, TechCorp InnoSoft will offer a more comprehensive suite of technology solutions, delivering greater value to customers and addressing a wider range of market needs.', 'Achieve Operational Synergies: The merger will enable cost efficiencies and operational synergies, optimizing resources and enhancing overall productivity.']
+
+  section.press-release
+    .container
+      .press-release__wrap
+        h4.press-release__title TechCorp and InnoSoft Announce Strategic Merger to Accelerate Innovation and Growth
+        +flags('USA', 'CAN')
+        .press-release__tags    
+          .press-release__tag FinTech
+          .press-release__tag Infrastructure Software
+        .press-release__content-block
+          h5.press-release__subtitle Introduction
+          p.press-release__text TechCorp, a leading provider of technology solutions, is pleased to announce its merger with InnoSoft, a renowned software development company. This strategic merger aims to combine the strengths and capabilities of both companies to accelerate innovation, enhance product offerings, and drive growth in the technology sector.
+        .press-release__content-block
+          h5.press-release__subtitle Transaction Details
+          p.press-release__text The merger, effective as of May 21, 2024 creates a unified entity that leverages the technological prowess and market reach of both TechCorp and InnoSoft. The combined company will operate under the name TechCorp InnoSoft and will be headquartered in New York. The leadership teams from both companies will join forces, with Mary Watson, CEO of TechCorp, and John Dou, CEO of InnoSoft, serving as co-CEOs of the newly formed company.
+        .press-release__content-block
+          h5.press-release__subtitle Strategic Rationale
+          p.press-release__text This merger represents a significant milestone for both TechCorp and InnoSoft. By integrating their complementary strengths, the companies aim to:
+          ul.press-release__list
+            each item in li 
+              li.press-release__item= item
+
+    .container.press-release__container
+      +share.press-release__share
