@@ -216,21 +216,21 @@ if (sortOrderBtn) {
 const body = document.querySelector('body')
 const popupOverlay = document.querySelector('.popup-overlay')
 
-// Функция для открытия попапа
+
 function openPopup(popup) {
   body.classList.add('active')
   popup.classList.add('active')
   popupOverlay.classList.add('active')
 }
 
-// Функция для закрытия попапа
+
 function closePopup(popup) {
   body.classList.remove('active')
   popup.classList.remove('active')
   popupOverlay.classList.remove('active')
 }
 
-// Функция для привязки событий к кнопке открытия попапа
+
 function setupPopupEvents(
   triggerBtnSelector,
   popupSelector,
@@ -255,7 +255,7 @@ function setupPopupEvents(
   }
 }
 
-// Настройка событий для попапов
+
 setupPopupEvents(
   '.tell-form .btn',
   '.tell-us__popup',
