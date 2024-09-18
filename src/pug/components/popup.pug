@@ -1,0 +1,16 @@
+mixin popup(title, text, className)
+  .popup(class=className)&attributes(attributes)
+    .popup__close 
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2929 12L4.00004 4.70708C3.80478 4.51182 3.80478 4.19524 4.00004 3.99998C4.1953 3.80471 4.51188 3.80471 4.70714 3.99998L12 11.2929L19.2929 3.99998C19.4882 3.80471 19.8048 3.80471 20 3.99998C20.1953 4.19524 20.1953 4.51182 20 4.70708L12.7071 12L20 19.2929C20.1953 19.4881 20.1953 19.8047 20 20C19.8048 20.1952 19.4882 20.1952 19.2929 20L12 12.7071L4.70714 20C4.51188 20.1952 4.1953 20.1952 4.00004 20C3.80478 19.8047 3.80478 19.4881 4.00004 19.2929L11.2929 12Z" fill="#28231E"/>
+      </svg>
+
+    .popup__content
+      .popup__title!= title 
+      .popup__text= text
+      button.popup__btn Great! 
+
+    .popup-bg-1 
+      img(src="img/popup/popup-bg-1.png", alt="")
+    .popup-bg-2 
+      img(src="img/popup/popup-bg-2.png", alt="")

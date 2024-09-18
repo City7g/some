@@ -1,6 +1,7 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: $primary transparent;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -12,6 +13,11 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background-color: $white;
+  z-index: 1;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 main {
