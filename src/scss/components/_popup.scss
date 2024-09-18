@@ -13,7 +13,7 @@
   visibility: hidden;
 }
 
- .popup-overlay.active {
+.popup-overlay.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -23,7 +23,7 @@
   position: relative;
   pointer-events: auto;
   padding: toRem(100) toRem(32) toRem(80);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: toRem(32) toRem(8);
   position: absolute;
   top: 50%;
@@ -35,6 +35,11 @@
   transition: opacity 0.2s ease, visibility 0.2s ease;
   visibility: hidden;
   z-index: 3;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(80) toRem(16) toRem(60);
+    width: toRem(343);
+  }
 }
 
 .popup.active {
@@ -60,8 +65,12 @@
 
 .popup__title {
   @include h4;
-  color: #28231E;
+  color: #28231e;
   margin: 0 auto toRem(12);
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
 }
 
 .popup__text {
@@ -69,12 +78,16 @@
   color: #636363;
   max-width: toRem(418);
   margin: 0 auto toRem(32);
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+  }
 }
 
 .popup__btn {
   @include body6;
   width: toRem(239);
-  background-color: #28231E;
+  background-color: #28231e;
   color: #ffffff;
   padding: toRem(12) toRem(20);
   text-align: start;
@@ -83,6 +96,10 @@
 .popup-bg-1,
 .popup-bg-2 {
   position: absolute;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .popup-bg-1 {
