@@ -11,7 +11,7 @@ import config from './webpack.config.js'
 import { vacanciesData } from './src/data/vacation-database.js'
 import { clientsData } from './src/data/clients.js'
 import { footerLinks } from './src/data/footer.js'
-
+import { listTransaction } from './src/data/list-transactions.js'
 
 console.log(process.env.NODE_ENV)
 
@@ -55,6 +55,7 @@ const html = () => {
           clientsData: clientsData,
           footerLinks: footerLinks,
           vacanciesData: vacanciesData,
+          listTransaction: listTransaction,
         },
       })
     )
