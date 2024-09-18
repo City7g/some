@@ -278,13 +278,13 @@
   background-color: #f3f2f5;
 }
 
-.sort-order__btn span:first-child {
+.sort-order__desktop-name {
   @media screen and (max-width: $tablet) {
     display: none;
   }
 }
 
-.sort-order__btn span:nth-of-type(2) {
+.sort-order__mobile-name  {
   display: none;
 
   @media screen and (max-width: $tablet) {

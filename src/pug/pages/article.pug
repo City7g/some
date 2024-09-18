@@ -1,0 +1,17 @@
+extends ../layouts/main
+
+block content
+  section.acticle
+    .container
+      .acticle__body  
+        h1.acticle__title The Transformation of the Healthcare Industry
+        .article__times
+          +date('June 25, 2024')
+          +time('7 min read')
+        .article__tags
+          +tag('FinTech')
+          +tag('Infrastructure Software')
+        .article__image
+          img.acticle__img(src='/img/reports/item-2.jpg' alt='')
+          img.acticle__mask(src='/img/reports/mask-2.svg' alt='')
+      article 
