@@ -1,0 +1,117 @@
+.contact {
+  padding: toRem(140) 0;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(24) 0 toRem(44) 0;
+  }
+}
+
+.contact__wrap {
+  display: grid;
+  grid-template-columns: 49.375% 47.5%;
+  column-gap: toRem(40);
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__title {
+  @include h3;
+  margin-bottom: toRem(40);
+
+  @media screen and (max-width: $tablet) {
+    @include h4;
+    margin-bottom: toRem(24);
+  }
+}
+
+.contact__links {
+  @include body4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: toRem(28);
+  row-gap: toRem(16);
+  margin-bottom: toRem(40);
+
+  @media screen and (max-width: $tablet) {
+    @include body7;
+    margin-bottom: toRem(44);
+    grid-template-columns: 1fr;
+    row-gap: toRem(10);
+  }
+}
+
+.contact__link {
+  display: flex;
+  width: max-content;
+  transition: color 0.3s ease;
+
+  @include hover {
+    color: #6d46dc;
+  }
+}
+
+.contact__link-icon {
+  margin-right: toRem(8);
+  width: toRem(24);
+  height: toRem(24);
+  stroke: #28231e;
+  fill: transparent;
+
+  @media screen and (max-width: $tablet) {
+    margin-right: toRem(6);
+    width: toRem(20);
+    height: toRem(20);
+  }
+}
+
+.contact__link:last-child .contact__link-icon {
+  stroke: transparent;
+  fill: #0057ae;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(toRem(161.5), toRem(304)));
+  column-gap: toRem(24);
+  row-gap: toRem(32);
+
+  @media screen and (max-width: $tablet) {
+    gap: toRem(20);
+  }
+}
+
+.contact__form input:not(:nth-child(-n+2)) {
+  @media screen and (max-width: $tablet) {
+    grid-column: 1 / -1;
+  }
+}
+
+.contact__form textarea {
+  max-height: toRem(140) !important; // ???
+}
+
+.contact__form textarea,
+.contact__form button {
+  grid-column: 1 / -1;
+  max-height: toRem(140);
+}
+
+.contact__image {
+  display: flex;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.contact__image--mobile {
+  display: none;
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    margin-bottom: toRem(44);
+    // object-fit: cover;
+  }
+}
