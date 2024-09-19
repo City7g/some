@@ -1,0 +1,34 @@
+
+extends ../layouts/main
+
+block content
+  - const contactLinks = [{icon: 'location', text:'Charlotte, North Carolina'}, {icon: 'phone', text:'(206) 358-8938'}, {icon: 'map', text:'10942 Garden Oaks Ln'}, {icon: 'envelope-alt', text:'john.smith@envoy.com'}, {icon: 'box-alt', text:'00801'}, {icon: 'linkedin', text:'View Linkedin'}];
+
+  section.contact
+    .container
+      .contact__wrap  
+        .contact__content
+          h1.contact__title Contact <i>Us</i>
+          .contact__links 
+            each link in contactLinks
+              a(href="#").contact__link 
+                svg.contact__link-icon
+                  use(xlink:href=`img/sprite.symbol.svg#${link.icon}`)
+                p=link.text
+
+          .contact__image--mobile
+            img(src="img/contact/contact-mobile.png", alt="")
+
+          form.contact__form 
+            input(type="text" placeholder="First Name").input--secondary
+            input(type="text" placeholder="Last Name").input--secondary
+            input(type="text" placeholder="Email").input--secondary
+            input(type="text" placeholder="Company Name").input--secondary
+            input(type="text" placeholder="Phone Number (Optional)").input--secondary
+            input(type="text" placeholder="Select Industry").input--secondary
+            input(type="text" placeholder="Size of Company (Optional)").input--secondary
+            input(type="text" placeholder="Job Role (Optional)").input--secondary
+            textarea(placeholder="Write a message...(Optional)").textarea--secondary 
+            button.btn(type="submit") Submit
+        .contact__image
+          img(src="img/contact/contact-main.png", alt="")
