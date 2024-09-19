@@ -122,4 +122,42 @@ if (timer) {
   updateTimer()
 }
 
+const selectWrap = document.querySelector('.select__wrap')
+const dropdown = document.querySelector('.dropdown')
+const clearAllButton = document.querySelector('.dropdown__top button')
+const sortOrderBtn = document.querySelector('.sort-order__btn')
+const sortOrderPopup = document.querySelector('.sort-order__popup')
+
+
+if (selectWrap && dropdown) {
+  selectWrap.addEventListener('click', e => {
+    e.preventDefault()
+
+    dropdown.classList.toggle('active')
+    selectWrap.classList.toggle('active')
+  })
+}
+
+if (clearAllButton) {
+  clearAllButton.addEventListener('click', e => {
+    e.preventDefault()
+
+    const checkboxes = document.querySelectorAll(
+      '.dropdown__list input[type="checkbox"]'
+    )
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false
+    })
+  })
+}
+
+if (sortOrderBtn) {
+  sortOrderBtn.addEventListener('click', e => {
+    e.preventDefault()
+
+    sortOrderPopup.classList.toggle('active');
+  })
+}
+
+
 // gsap.registerPlugin(Flip)

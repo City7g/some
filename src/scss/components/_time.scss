@@ -1,20 +1,20 @@
-.date__info {
+.time__info {
   display: flex;
   align-items: center;
 }
 
-.date__number {
+.time__number {
   padding: toRem(6) toRem(10);
   @include caption2;
   background-color: #eaeaea;
   border-radius: toRem(30);
 }
 
-.date__line {
+.time__line {
   margin: toRem(0) toRem(-2);
 }
 
-.date__calendar {
+.time__calendar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@
   border: 2px solid #eaeaea;
 }
 
-.date__calendar svg {
+.time__calendar svg {
   width: toRem(16);
   height: toRem(16);
   fill: #e8e5ff;

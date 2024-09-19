@@ -1,0 +1,102 @@
+
+extends ../layouts/main
+
+block content
+
+  section.list-of-transaction
+    .container
+      h2.list-of-transaction__title List of <i>Transactions</i>
+      .list-of-transaction__form 
+        .search
+          input(type="search" placeholder="Search by transactions...").search__input
+          svg.search__icon
+            use(xlink:href='img/sprite.symbol.svg#search')
+
+        .select__menu
+          .select__wrap
+            span All Industries
+            svg.chevron-down
+              use(xlink:href='img/sprite.symbol.svg#chevron-down')
+            svg.chevron-up
+              use(xlink:href='img/sprite.symbol.svg#chevron-up')
+          .dropdown 
+            .dropdown__top
+              h5 Select Industry
+              button Clear All 
+                svg
+                  use(xlink:href='img/sprite.symbol.svg#trash')
+
+            .dropdown__list
+              label 
+                input(type="checkbox") 
+                svg
+                  use(xlink:href='img/sprite.symbol.svg#check')
+                p All Industries
+                svg#purple-icon
+                  use(xlink:href='img/sprite.symbol.svg#check')
+
+              each item in listTransaction
+                h6= item.title 
+                each checkbox in item.checkboxs
+                  label 
+                    input(type="checkbox")
+                    svg
+                      use(xlink:href='img/sprite.symbol.svg#check')
+                    span
+                    p= checkbox
+                    svg#purple-icon
+                      use(xlink:href='img/sprite.symbol.svg#check')
+
+            .dropdown__bottom
+              button Cancel
+              button Apply
+
+        .sort-order__wrap
+          button.sort-order__btn 
+            span.sort-order__desktop-name From Newest to Oldest
+            span.sort-order__mobile-name Sort
+            svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              <path d="M3.33398 6.66675L5.83399 4.16675L8.33399 6.66675" stroke="#828282" stroke-linecap="round"/>
+              <path d="M5.83464 16.6667L5.83464 5.00008" stroke="#828282" stroke-linecap="round"/>
+              <path d="M16.666 14.1667L14.166 16.6667L11.666 14.1667" stroke="#828282" stroke-linecap="round"/>
+              <path d="M14.1654 4.16675L14.1654 15.8334" stroke="#828282" stroke-linecap="round"/>
+
+
+          .sort-order__popup
+            p sort by 
+            button From Newest to Oldest
+              svg.purple-icon
+                use(xlink:href='img/sprite.symbol.svg#check') 
+            button From Oldest to Newest
+              svg.purple-icon
+                use(xlink:href='img/sprite.symbol.svg#check') 
+
+
+    //- .list-of-transaction__content 
+    //-   .transactions__list
+    //-     - for (let i = 0; i < 3; i++)
+    //-       .transaction
+    //-         .transaction__back
+    //-           h4.transaction__title Bardess Group <i>& Cleartelligence</i>
+    //-           p.transaction__text Backed by: Align Capital Partners
+    //-           p.transaction__description Description
+    //-           .transaction__tags
+    //-             +tag('Data & Analytics')
+    //-             +tag('Data Engineering')
+    //-         .transaction__front
+    //-           .transaction__wrap
+    //-             .transaction__bg
+    //-               img(src=`/img/transactions/transaction-wrap.svg`, alt="")
+    //-             .transaction__from
+    //-               img(src=`/img/company/item-${1}.png`, alt="")
+    //-             .transaction__to
+    //-               img(src=`/img/company/item-${2}.png`, alt="")
+    //-             p.transaction__type Acquired By
+
+    //-           +flags.transaction__flags('USA', 'FRA')
+    //-           .transaction__backed
+    //-             p.transaction__backed-text Backed by
+    //-             img(src="/img/company/backed.png" alt="")
+    //-           .transaction__tags
+    //-             +tag('Data & Analytics')
+    //-             +tag('Data Engineering')

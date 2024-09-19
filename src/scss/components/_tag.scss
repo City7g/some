@@ -3,5 +3,6 @@
   @include caption2;
   color: #636363;
   border: 1px solid #636363;
-  border-radius: toRem(1);
+  border-radius: 1px;
+  width: max-content;
 }

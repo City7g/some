@@ -1,0 +1,147 @@
+.article__content {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.acticle__body {
+  max-width: toRem(750);
+}
+
+.acticle__title {
+  @include h4;
+
+  @media screen and (max-width: $tablet) {
+    @include h7;
+  }
+}
+
+.article__times,
+.article__tags {
+  display: flex;
+  margin-top: toRem(24);
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(20);
+  }
+
+  > :first-child {
+    margin-right: toRem(8);
+  }
+}
+
+.article__image {
+  display: flex;
+  width: 750px; // delete this
+  height: 750px; // delete this
+  margin: toRem(44) 0;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.article__mobile-image {
+  display: none;
+  // width: 375px; // delete this
+  height: 343px; // delete this
+  margin: toRem(44) 0;
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+  }
+}
+
+.article__paragraphs {
+  margin-bottom: toRem(100);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(60);
+  }
+}
+
+.acticle__subtitle {
+  @include s1;
+  margin-bottom: toRem(16);
+
+  @media screen and (max-width: $tablet) {
+    @include s4;
+    margin-bottom: toRem(12);
+  }
+}
+
+.acticle__text {
+  @include body2;
+
+  &:not(:last-child) {
+    margin-bottom: toRem(44);
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include body4;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(36);
+    }
+  }
+}
+
+.sidebar {
+  background-color: #f9f9fa;
+  border-radius: toRem(32) toRem(4);
+  padding: toRem(33) toRem(36) toRem(14);
+  height: max-content;
+  max-width: toRem(416);
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.sidebar h6 {
+  @include h6;
+  margin-bottom: toRem(36);
+}
+
+.sidebar__tags {
+  display: flex;
+  margin-top: toRem(13);
+
+  > :first-child {
+    margin-right: toRem(8);
+  }
+}
+
+.sidebar__card {
+  padding-bottom: toRem(28);
+
+  &:not(:first-child) {
+    margin-top: toRem(28);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #cecfcf;
+  }
+}
+
+.sidebar__text {
+  @include s4;
+  margin-top: toRem(14);
+}
+
+.acticle__container {
+  @media screen and (max-width: $tablet) {
+    display: contents;
+  }
+}
+
+.acticle__share {
+  margin-bottom: toRem(140);
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: toRem(100);
+  }
+}
