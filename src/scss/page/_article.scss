@@ -7,11 +7,11 @@
   }
 }
 
-.acticle__body {
+.article__body {
   max-width: toRem(750);
 }
 
-.acticle__title {
+.article__title {
   @include h4;
 
   @media screen and (max-width: $tablet) {
@@ -63,7 +63,7 @@
   }
 }
 
-.acticle__subtitle {
+.article__subtitle {
   @include s1;
   margin-bottom: toRem(16);
 
@@ -73,7 +73,7 @@
   }
 }
 
-.acticle__text {
+.article__text {
   @include body2;
 
   &:not(:last-child) {
@@ -132,13 +132,13 @@
   margin-top: toRem(14);
 }
 
-.acticle__container {
+.article__container {
   @media screen and (max-width: $tablet) {
     display: contents;
   }
 }
 
-.acticle__share {
+.article__share {
   margin-bottom: toRem(140);
 
   @media screen and (max-width: $tablet) {

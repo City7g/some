@@ -3,11 +3,11 @@ extends ../layouts/main
 block content
   - const articlePageText = [{title: 'Introduction', text: 'The healthcare industry is undergoing a significant transformation, driven by the rapid advancement of digital health technologies. These innovations are revolutionizing how healthcare is delivered, improving patient outcomes, and making medical services more accessible and efficient. From telemedicine to wearable devices, digital health solutions are reshaping the future of healthcare.'}, {title: 'Impact of Digital Health Innovations', text: 'One of the most significant impacts of digital health is the rise of telemedicine. Telemedicine allows patients to consult with healthcare providers remotely, reducing the need for in-person visits and increasing access to care, especially in underserved areas. Additionally, wearable devices and mobile health apps enable continuous monitoring of patients health, providing real-time data that can be used to prevent, diagnose, and manage chronic conditions more effectively. These technologies empower patients to take an active role in their health management and provide healthcare professionals with valuable insights to tailor treatments.'}, {title: 'Challenges and Future Prospects', text: 'Despite the numerous benefits, the adoption of digital health technologies also presents challenges. Data security and patient privacy are paramount concerns, as sensitive health information must be protected against cyber threats. Moreover, integrating these technologies into existing healthcare systems requires significant investment and changes in infrastructure. Nevertheless, the future prospects of digital health are promising. Continued advancements in artificial intelligence, machine learning, and blockchain technology are expected to further enhance the capabilities of digital health solutions, making healthcare more personalized, predictive, and preventative.'}, {title: 'Conclusion', text: 'The healthcare industry is embracing digital health innovations, which are transforming the way care is delivered and managed. While there are challenges to overcome, the potential benefits for patients and healthcare providers are immense. By leveraging these technologies, the healthcare industry can improve outcomes, increase efficiency, and provide better care for all.' }];
 
-  section.acticle
+  section.article
     .container
       .article__content
-        .acticle__body  
-          h1.acticle__title The Transformation of the Healthcare Industry
+        .article__body  
+          h1.article__title The Transformation of the Healthcare Industry
           .article__times
             +date('June 25, 2024')
             +time('7 min read')
@@ -15,22 +15,22 @@ block content
             +tag('FinTech')
             +tag('Infrastructure Software')
           .article__image
-            img.acticle__img(src='/img/reports/item-2.jpg' alt='')
+            img.article__img(src='/img/reports/item-2.jpg' alt='')
           .article__mobile-image
-            img.acticle__img(src='/img/article/mobile-image.png' alt='')
+            img.article__img(src='/img/article/mobile-image.png' alt='')
           .article__paragraphs
             each item in articlePageText
-              h3.acticle__subtitle= item.title 
-              p.acticle__text= item.text
+              h3.article__subtitle= item.title 
+              p.article__text= item.text
         aside.sidebar
           h6 Related Articles
           - for (var x = 0; x < 5; x++)
-              .sidebar__card 
-                +date('June 25, 2024')
-                .sidebar__tags
-                  +tag('FinTech')
-                  +tag('Infrastructure Software')
-                p.sidebar__text The Transformation of the Healthcare Industry
+            .sidebar__card 
+              +date('June 25, 2024')
+              .sidebar__tags
+                +tag('FinTech')
+                +tag('Infrastructure Software')
+              p.sidebar__text The Transformation of the Healthcare Industry
 
-    .container.acticle__container
-      +share.acticle__share
+    .container.article__container
+      +share.article__share
