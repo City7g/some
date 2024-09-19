@@ -2,6 +2,7 @@
   padding: toRem(80) 0;
   color: $subscribe-text;
   background-color: $subscribe-bg;
+  position: relative;
 
   @media screen and (max-width: $tablet) {
     padding-bottom: 44px;

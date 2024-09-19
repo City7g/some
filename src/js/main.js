@@ -160,4 +160,109 @@ if (sortOrderBtn) {
 }
 
 
+// const body = document.querySelector('body');
+// const popupOverlay = document.querySelector('.popup-overlay');
+
+// const tellUsPopup = document.querySelector('.tell-us__popup');
+// const tellUsSubmitBtn = document.querySelector('.tell-form .btn');
+// const tellUsPopupCloseIcon = document.querySelector('.tell-us__popup .popup__close');
+
+// const subscribePopup = document.querySelector('.subscribe__popup');
+// const subscribeSubmitBtn = document.querySelector('.subscribe__form .btn');
+// const subscribePopupCloseIcon = document.querySelector('.subscribe__popup .popup__close');
+
+// if (tellUsPopup) {
+//   tellUsSubmitBtn.addEventListener('click', e => {
+//     e.preventDefault();
+
+//     body.classList.add('active')
+//     tellUsPopup.classList.add('active')
+//     popupOverlay.classList.add('active')
+//   })
+// }
+
+// if (tellUsPopupCloseIcon) {
+//   tellUsPopupCloseIcon.addEventListener('click', e => {
+//     e.preventDefault()
+
+//     body.classList.remove('active')
+//     tellUsPopup.classList.remove('active')
+//     popupOverlay.classList.remove('active')
+//   })
+// }
+
+// if (subscribePopup) {
+//   subscribeSubmitBtn.addEventListener('click', e => {
+//     e.preventDefault()
+
+//     body.classList.add('active')
+//     subscribePopup.classList.add('active')
+//     popupOverlay.classList.add('active')
+//   })
+// }
+
+// if (subscribePopupCloseIcon) {
+//   subscribePopupCloseIcon.addEventListener('click', e => {
+//     e.preventDefault()
+
+//     body.classList.remove('active')
+//     subscribePopup.classList.remove('active')
+//     popupOverlay.classList.remove('active')
+//   })
+// }
 // gsap.registerPlugin(Flip)
+
+
+const body = document.querySelector('body')
+const popupOverlay = document.querySelector('.popup-overlay')
+
+
+function openPopup(popup) {
+  body.classList.add('active')
+  popup.classList.add('active')
+  popupOverlay.classList.add('active')
+}
+
+
+function closePopup(popup) {
+  body.classList.remove('active')
+  popup.classList.remove('active')
+  popupOverlay.classList.remove('active')
+}
+
+
+function setupPopupEvents(
+  triggerBtnSelector,
+  popupSelector,
+  closeIconSelector
+) {
+  const triggerBtn = document.querySelector(triggerBtnSelector)
+  const popup = document.querySelector(popupSelector)
+  const closeIcon = document.querySelector(closeIconSelector)
+
+  if (triggerBtn && popup) {
+    triggerBtn.addEventListener('click', e => {
+      e.preventDefault()
+      openPopup(popup)
+    })
+  }
+
+  if (closeIcon) {
+    closeIcon.addEventListener('click', e => {
+      e.preventDefault()
+      closePopup(popup)
+    })
+  }
+}
+
+
+setupPopupEvents(
+  '.tell-form .btn',
+  '.tell-us__popup',
+  '.tell-us__popup .popup__close'
+)
+setupPopupEvents(
+  '.subscribe__form .btn',
+  '.subscribe__popup',
+  '.subscribe__popup .popup__close'
+)
