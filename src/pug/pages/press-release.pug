@@ -2,28 +2,27 @@
 extends ../layouts/main
 
 block content
-  - const li = ['Enhance Innovation: The merger will facilitate greater collaboration between the research and development teams of both companies, fostering an environment of innovation and accelerating the development of cutting-edge technology solutions.', 'Expand Market Reach: The combined entity will benefit from an expanded customer base and a broader geographical presence, allowing for more robust market penetration and increased sales opportunities.', 'Strengthen Product Offerings: Leveraging the expertise of both companies, TechCorp InnoSoft will offer a more comprehensive suite of technology solutions, delivering greater value to customers and addressing a wider range of market needs.', 'Achieve Operational Synergies: The merger will enable cost efficiencies and operational synergies, optimizing resources and enhancing overall productivity.']
+  //- - const li = ['Enhance Innovation: The merger will facilitate greater collaboration between the research and development teams of both companies, fostering an environment of innovation and accelerating the development of cutting-edge technology solutions.', 'Expand Market Reach: The combined entity will benefit from an expanded customer base and a broader geographical presence, allowing for more robust market penetration and increased sales opportunities.', 'Strengthen Product Offerings: Leveraging the expertise of both companies, TechCorp InnoSoft will offer a more comprehensive suite of technology solutions, delivering greater value to customers and addressing a wider range of market needs.', 'Achieve Operational Synergies: The merger will enable cost efficiencies and operational synergies, optimizing resources and enhancing overall productivity.']
+  - const li = ['Bachelor’s degree in Economics, Finance, Marketing, Business Administration, or a related field. A Master’s degree or MBA is a plus.', 'Minimum of 5 years of experience as a Market Analyst or in a similar role within a consulting firm or corporate environment.', 'Strong analytical skills with the ability to interpret complex data and translate it into actionable insights.', 'Proficiency in data analysis tools and software such as Excel, SQL, SAS, SPSS, or similar.', 'Excellent communication and presentation skills, with the ability to convey complex information clearly and concisely.', 'Strong project management skills, with the ability to manage multiple projects simultaneously and meet deadlines.', 'High level of attention to detail and accuracy in work.', 'Ability to work independently as well as part of a team.', 'Familiarity with industry trends and the ability to stay up-to-date with new developments in the market.', 'Fluency in English; knowledge of additional languages is a plus.']
 
   section.press-release
     .container
       .press-release__wrap
-        h4.press-release__title TechCorp and InnoSoft Announce Strategic Merger to Accelerate Innovation and Growth
+        h1.press-release__title TechCorp and InnoSoft Announce Strategic Merger to Accelerate Innovation and Growth
         +flags('USA', 'CAN')
-        .press-release__tags    
-          .press-release__tag FinTech
-          .press-release__tag Infrastructure Software
-        .press-release__content-block
-          h5.press-release__subtitle Introduction
-          p.press-release__text TechCorp, a leading provider of technology solutions, is pleased to announce its merger with InnoSoft, a renowned software development company. This strategic merger aims to combine the strengths and capabilities of both companies to accelerate innovation, enhance product offerings, and drive growth in the technology sector.
-        .press-release__content-block
-          h5.press-release__subtitle Transaction Details
-          p.press-release__text The merger, effective as of May 21, 2024 creates a unified entity that leverages the technological prowess and market reach of both TechCorp and InnoSoft. The combined company will operate under the name TechCorp InnoSoft and will be headquartered in New York. The leadership teams from both companies will join forces, with Mary Watson, CEO of TechCorp, and John Dou, CEO of InnoSoft, serving as co-CEOs of the newly formed company.
-        .press-release__content-block
-          h5.press-release__subtitle Strategic Rationale
-          p.press-release__text This merger represents a significant milestone for both TechCorp and InnoSoft. By integrating their complementary strengths, the companies aim to:
-          ul.press-release__list
+        .press-release__tags   
+          +tag('FinTech')
+          +tag('Infrastructure Software')
+        .press-release__content
+          h2 Introduction
+          p TechCorp, a leading provider of technology solutions, is pleased to announce its merger with InnoSoft, a renowned software development company. This strategic merger aims to combine the strengths and capabilities of both companies to accelerate innovation, enhance product offerings, and drive growth in the technology sector.
+          h2 Transaction Details
+          p The merger, effective as of May 21, 2024 creates a unified entity that leverages the technological prowess and market reach of both TechCorp and InnoSoft. The combined company will operate under the name TechCorp InnoSoft and will be headquartered in New York. The leadership teams from both companies will join forces, with Mary Watson, CEO of TechCorp, and John Dou, CEO of InnoSoft, serving as co-CEOs of the newly formed company.
+          h2 Strategic Rationale
+          p This merger represents a significant milestone for both TechCorp and InnoSoft. By integrating their complementary strengths, the companies aim to:
+          ul
             each item in li 
-              li.press-release__item= item
+              li= item
 
     .container.press-release__container
       +share.press-release__share

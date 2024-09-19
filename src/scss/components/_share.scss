@@ -2,10 +2,9 @@
   @include body3;
   color: #636363;
   display: grid;
-  grid-template-columns: toRem(430) 1fr;
+  grid-template-columns: toRem(431) 1fr;
   border: toRem(1) solid #cecfcf;
   align-items: center;
-  
 
   @media screen and (max-width: $tablet) {
     grid-template-rows: toRem(79) toRem(79);
@@ -20,7 +19,7 @@
   @media screen and (max-width: $tablet) {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    padding-left: toRem(28);
+    padding-left: toRem(27);
   }
 }
 

@@ -1,5 +1,5 @@
 .tag {
-  padding: 3px 7px;
+  padding: toRem(3) toRem(7);
   @include caption2;
   color: #636363;
   border: 1px solid #636363;
